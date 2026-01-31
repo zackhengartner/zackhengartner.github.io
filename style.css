@@ -1,0 +1,121 @@
+/* =======================
+   Global Styles
+   ======================= */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+a {
+    color: #007ACC;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* =======================
+   Header
+   ======================= */
+header {
+    background-color: #007ACC;
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+header p {
+    margin: 0.5rem 0 0;
+    font-size: 1.2rem;
+}
+
+/* =======================
+   Navigation Menu
+   ======================= */
+nav {
+    background-color: #333;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav li {
+    margin: 0;
+}
+
+nav a {
+    display: block;
+    padding: 0.8rem 1.2rem;
+    color: white;
+}
+
+nav a:hover {
+    background-color: #007ACC;
+}
+
+/* =======================
+   Main Content
+   ======================= */
+main {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+h2 {
+    border-bottom: 2px solid #007ACC;
+    padding-bottom: 0.3rem;
+    margin-bottom: 1rem;
+}
+
+/* =======================
+   Lists
+   ======================= */
+ul {
+    list-style-type: disc;
+    padding-left: 2rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+/* =======================
+   Responsive Design
+   ======================= */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav a {
+        text-align: center;
+    }
+}
