@@ -26,24 +26,22 @@ function App() {
   return (
     <div className="app-container">
       <div className = "top-section">
-        <CurrentTime />
         <h1 className="About-Me">
           Zackery Hengartner | Computer Science & Engineering
         </h1>
+        <CurrentTime />
         <input type="checkbox" className="theme-checkbox" />
       </div>
 
 
-      <div className="me">
-        <img
-          src={picofme}
-          className="picofme"
-          alt="Picture of Me"
-          style={{ width: '200px', height: '200px', borderRadius: '50%' }}
-        />
-      </div>
+      <img
+        src={picofme}
+        className="picofme"
+        alt="Picture of Me"
+      />
+      <h1 class="reveal-text">Hello There, Welcome To My Portfolio!</h1>
 
-      <button className="skills-button">Skills</button>
+
 
       <div className="about-section">
         <img src={toledoLogo} className="logo Toledo" alt="Toledo logo" />
