@@ -25,6 +25,13 @@ function CurrentTime() {
 function App() {
   return (
     <div className="app-container">
+      <nav className="main-Nav">
+        <a href="#about">About Me</a>
+        <a href="#skills">Skills</a>
+        <a>Projects</a>
+        <a href="#socials">Socials</a>
+      </nav>
+
       <div className = "top-section">
         <h1 className="About-Me">
           Zackery Hengartner | Computer Science & Engineering
@@ -33,7 +40,6 @@ function App() {
         <input type="checkbox" className="theme-checkbox" />
       </div>
 
-
       <img
         src={picofme}
         className="picofme"
@@ -41,27 +47,31 @@ function App() {
       />
       <h1 class="reveal-text">Hello There, Welcome To My Portfolio!</h1>
 
-
-
-      <div className="about-section">
-        <img src={toledoLogo} className="logo Toledo" alt="Toledo logo" />
+      <div id="about" className="about-section">
+        <img src={toledoLogo} className="logoToledo" alt="Toledo logo" />
         <p className="About-Me-Text">
-          Hello! My name is Zack Hengartner and I am a student at the University of Toledo studying Computer Science. I
-          have a passion for coding and love to create new projects in my free time. Feel free to reach out to me on
-          GitHub or LinkedIn!
+          I currently attend the <strong>University of Toledo</strong>, studying Computer Science & Engineering. I am an Elyria resident and still live there throughout the semester.
+          You may be wondering: <blockquote><em>"do you have to travel 1-2 hours every day for class?"</em></blockquote> to which the simple answer to this is <strong>NO</strong>. I am very fortunate to be close to
+          the UPRC, which is a sattelite campus setting provided by <strong>LCCC</strong> which is widely used for the University Partnership Program with UT. On this campus, we are
+          fortunate to have UT professors on OUR campus in North Ridgeville! Pretty cool right?
         </p>
       </div>
 
-      <div className="social-links">
+      <div id="skills" className="skill-section">
+        <p><strong>Programming Languages:</strong> Java, JavaScript, Python, C++, C, HTML, CSS, SQL, x86, ARM</p>
+        <p><strong>Tools & IDEs:</strong> Eclipse, Visual Studios 2022, VS Code, IAR Workbench, Playwright, Git, Azure Devops, MPLAB</p>
+        <p><strong>Software:</strong> Microsoft Office Suite, Adobe Creative Cloud, Altium, LTspice, MATLAB</p>
+      </div>
+
+      <div id="socials" className="social-links">
         <a href="https://github.com/zackhengartner" target="_blank">
           <img src={githubLogo} className="logo" alt="Github logo" />
         </a>
         <a href="https://www.linkedin.com/in/zackery-hengartner/" target="_blank">
           <img src={linkedInLogo} className="logo linkedIn" alt="LinkedIn logo" />
         </a>
+        <p className="reach-out">Places To Find Me!</p>
       </div>
-
-      <p className="reach-out">Places To Find Me!</p>
     </div>
   );
 }
