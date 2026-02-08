@@ -2,6 +2,8 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  opacity: 0;
+  animation: fadeIn ease 3s forwards, scaleDown ease 3s forwards;
 }
 
 .logo {
@@ -68,6 +70,8 @@
   cursor: pointer;
   font-size: var(--toggle-size);
   align-self: left;
+  opacity: 0%;
+  animation: fadeIn ease 3s forwards;
 }
 
 .theme-checkbox::before {
@@ -102,7 +106,8 @@
   overflow: hidden;
   direction: rt1;
   width: fit-content;
-  animation: typing 3s forwards;
+  opacity: 0;
+  animation: fadeIn ease 3s forwards, typing 3s forwards;
   transform: translateY(-150px);
   animation-timing-function: ease;
 }
@@ -129,7 +134,9 @@
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  animation: moveFace ease 3s forwards;
+  opacity: 0;
+  animation: fadeIn ease 3s forwards, moveFace ease 3s forwards;
+  
 }
 
 .About-Me:hover {
@@ -141,6 +148,11 @@
 .About-Me-Text {
   opacity: 0%;
   position: relative;
+}
+
+.About-Me {
+  opacity: 0%;
+  animation: fadeIn 3s ease forwards;
 }
 
 .logoToledo:hover + .About-Me-Text {
@@ -160,6 +172,8 @@
   border-radius: 6px;
   text-align: center;
   transform: translateY(20px);
+  opacity: 0%;
+  animation: fadeIn ease 3s forwards;
 }
 
 .main-Nav a:hover {
@@ -169,6 +183,8 @@
 html {
   scroll-behavior: smooth;
 }
+
+
 
 /* keyframes */
 @keyframes moveFace {
@@ -190,6 +206,11 @@ html {
   to {
     opacity: 100%;
   }
+}
+
+@keyframes scaleDown {
+  from {transform: scale(1.05);}
+  to{transform: scale(1);}
 }
 
 
