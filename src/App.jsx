@@ -7,7 +7,7 @@ import picofme from './assets/me.png';
 import pythonLogo from './assets/pythonLogo.png';
 import javaLogo from './assets/javaLogo.png';
 import cLogo from './assets/cLogo.png';
-import cplusplusLogo from './assets/cplusplusLogo.png';
+import cplusplusLogo from './assets/cplusplus.png';
 import htmlLogo from './assets/htmlLogo.png';
 import cssLogo from './assets/cssLogo.png';
 
