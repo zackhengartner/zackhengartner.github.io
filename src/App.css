@@ -22,7 +22,8 @@ html, body {
 }
 
 .page {
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
   width: 100%;
   box-sizing: border-box;
 
@@ -124,11 +125,11 @@ html, body {
 }
 
 .skills-section {
-  min-height: 100vh;
-  padding: 6rem 2rem;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  gap: 16px;
 }
 
 .skills-title {
