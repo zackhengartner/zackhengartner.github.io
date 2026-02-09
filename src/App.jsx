@@ -9,6 +9,9 @@ import cplusplusLogo from "./assets/cplusplus.png";
 import htmlLogo from "./assets/htmlLogo.png";
 import cssLogo from "./assets/cssLogo.png";
 import picofme from "./assets/zockidy.png";
+import javaScript from "./assets/javaScript.png";
+import bashLogo from "./assets/bashLogo.png";
+import powerShell from "./assets/powerShell.png";
 
 import "./App.css";
 
@@ -66,8 +69,19 @@ export default function App() {
         <div className="page-inner">
           <div className="skill-section">
             <h1 className="skills-header">Skills: (Programming Languages, Software, IDEs & Tools)</h1>
+            <div class ="img-grid">
+              <img src={javaLogo} className ="img1" alt="javaLogo" />
+              <img src={cLogo} className ="img4" alt="cLogo" />
+              <img src={cplusplusLogo} className ="img5" alt="cplusplusLogo" />
+              <img src={pythonLogo} className ="img7" alt="pythonLogo" />
 
-            <nav className="menu">
+              <img src={htmlLogo} className ="img3" alt="htmlLogo" />
+              <img src={cssLogo} className ="img2" alt="cssLogo" />
+              <img src={powerShell} className ="img6" alt="powerShell" />
+              <img src={bashLogo} className ="img8" alt="bashLogo" />
+            </div>
+
+            {/* <nav className="menu">
               <input type="checkbox" className="menu-open" name="menu-open" id="menu-open" />
               <label className="menu-open-button" htmlFor="menu-open">
                 <p className="internal-text"><strong>Languages</strong></p>
@@ -79,7 +93,7 @@ export default function App() {
               <img className="menu-item green" src={cplusplusLogo} alt="C++" />
               <img className="menu-item blue" src={htmlLogo} alt="HTML" />
               <img className="menu-item indigo" src={cssLogo} alt="CSS" />
-            </nav>
+            </nav> */}
 
             <p><strong>Programming Languages:</strong> Java, JavaScript, Python, C++, C, HTML, CSS, SQL, x86, ARM</p>
             <p><strong>Tools & IDEs:</strong> Eclipse, Visual Studios 2022, VS Code, IAR Workbench, Playwright, Git, Azure Devops, MPLAB</p>
@@ -92,7 +106,6 @@ export default function App() {
         <div className="page-inner">
           <div className="projects-section">
             <h1 className="projects-header">Projects</h1>
-            <p>Put your projects here.</p>
           </div>
         </div>
       </section>
