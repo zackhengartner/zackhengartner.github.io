@@ -55,7 +55,7 @@ html, body {
 .bg1 {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./assets/twi.png");
   background-size: cover;
-  background-color: rgb(133, 133, 231);
+  background-color: #242424;
   background-position: center;
   background-repeat: no-repeat;
   color: #fff;
@@ -64,6 +64,7 @@ html, body {
 .bg2 {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./assets/git_hub_logo.png");
   background-size: cover;
+  background-color: #242424;
   background-position: center;
   background-repeat: no-repeat;
   color: #fff;
@@ -72,6 +73,7 @@ html, body {
 .bg3 {
   background-image: url("./assets/LinkedIn_Logo.png");
   background-size: cover;
+  background-color: #242424;
   background-position: center;
   background-repeat: no-repeat;
   color: #fff;
@@ -80,6 +82,7 @@ html, body {
 .bg4 {
   background-image: url("./assets/me.png");
   background-size: cover;
+  background-color: #242424;
   background-position: center;
   background-repeat: no-repeat;
   color: #fff;
