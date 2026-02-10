@@ -1,0 +1,406 @@
+html {
+  scroll-behavior: smooth;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: none;
+  text-align: center;
+}
+
+.app-container {
+  width: 100%;
+}
+
+.page {
+  min-height: 100vh;
+  height: auto;
+  width: 100%;
+  box-sizing: border-box;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+
+  margin: 0;
+}
+
+.page-inner {
+  width: 100%;
+  max-width: 1000px;
+  box-sizing: border-box;
+
+  padding: 110px 24px 60px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 24px;
+}
+
+.bg1 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./assets/mtFuji.png");
+  background-size: cover;
+  background-color: #242424;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+}
+
+.bg2 {
+  background-size: cover;
+  background-color: #242424;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #ffffff;
+}
+
+.bg3 {
+  background-size: cover;
+  background-color: #ffffff;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+}
+
+.bg4 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9));
+  background-size: cover;
+  background-color: #242424;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+}
+
+
+.bg1 p { color: #ddd; }
+.bg2 p, .bg3 p, .bg4 p, .bg2 h1 {
+   color: #ffffff;
+   filter: drop-shadow(1px 1px 1px black);
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms, transform 300ms, border 300ms;
+  opacity: 0;
+  animation: fadeIn ease 3s forwards, scaleDown ease 3s forwards;
+}
+
+.logoToledo {
+  filter: drop-shadow(4px 4px 8px black);
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter ease 300ms, transform ease 300ms, border ease 300ms;
+  opacity: 0;
+  animation: fadeIn ease 3s forwards, scaleDown ease 3s forwards;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa) blur(1px);
+  transform: scale(1.1);
+}
+
+.logo.linkedin:hover,
+.logo.linkedIn:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa) blur(1px);
+  transform: scale(1.1);
+}
+
+.logoToledo:hover {
+  filter: drop-shadow(0 0 2em #FFDA00) blur(1px);
+  transform: scale(1.1);
+}
+
+.skills-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+}
+
+.skills-header {
+  white-space: nowrap;
+  text-align: top;
+}
+
+.img-grid {
+  --gap: 16px;
+  --num-cols: 4;
+  --row-height: 300px;
+
+  box-sizing: border-box;
+  align-items: center;
+
+  display: grid;
+  grid-template-columns: repeat(var(--num-cols), 1fr);
+  grid-auto-rows: var(--row-height);
+  
+  
+}
+
+.img1,.img2,.img3,.img4,.img5,.img6,.img7,.img8 {
+  filter: drop-shadow(2px 2px 2px black);
+  align-self: center;
+  justify-self: center;
+}
+
+.img1:hover,.img2:hover,.img3:hover,.img4:hover,.img5:hover,.img6:hover,.img7:hover,.img8:hover {
+  transform: scale(1.05);
+  transition: transform ease 500ms;
+}
+
+.img-grid > img {
+  width: 50%;
+  height: 50%;
+  object-fit: contain;
+}
+
+.img-grid2 {
+  --gap: 16px;
+  --num-cols: 3;
+  --row-height: 300px;
+
+  box-sizing: border-box;
+  align-items: center;
+
+  display: grid;
+  grid-template-columns: repeat(var(--num-cols), 1fr);
+  grid-auto-rows: var(--row-height);
+  
+  
+}
+
+.img1-2,.img2-2,.img3-2,.img4-2,.img5-2,.img6-2 {
+  filter: drop-shadow(2px 2px 2px black);
+  align-self: center;
+  justify-self: center;
+}
+
+.img1-2:hover,.img2-2:hover,.img3-2:hover,.img4-2:hover,.img5-2:hover,.img6-2:hover{
+  transform: scale(1.05);
+  transition: transform ease 500ms;
+}
+
+.img-grid2 > img {
+  width: 50%;
+  height: 50%;
+  object-fit: contain;
+}
+
+.img-grid3 {
+  --gap: 16px;
+  --num-cols: 3;
+  --row-height: 300px;
+
+  box-sizing: border-box;
+  align-items: center;
+
+  display: grid;
+  grid-template-columns: repeat(var(--num-cols), 1fr);
+  grid-auto-rows: var(--row-height);
+  
+  
+}
+
+.img1-3,.img2-3,.img3-3 {
+  filter: drop-shadow(2px 2px 2px black);
+  align-self: center;
+  justify-self: center;
+}
+
+.img1-3:hover,.img2-3:hover,.img3-3:hover {
+  transform: scale(1.05);
+  transition: transform ease 500ms;
+}
+
+.img-grid3 > img {
+  width: 50%;
+  height: 50%;
+  object-fit: contain;
+}
+
+/* .img1:hover, .img2:hover,.img3:hover,.img4:hover,.img5:hover,.img6:hover,.img7:hover,.img8:hover,.img1-2:hover,.img2-2:hover,.img3-2:hover,.img4-2:hover,.img5-2:hover,.img6-2:hover,.img1-3:hover,.img2-3:hover,.img3-3:hover {
+  transition: filter ease 500ms;
+  filter: drop-shadow(0 0 2em #000002aa);
+} */
+
+
+/* .skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.skill-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 250ms ease, box-shadow 250ms ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
+}
+
+.skill-card h3 {
+  margin-bottom: 1rem;
+  color: #c7cbff;
+}
+
+.skill-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skill-card li {
+  padding: 0.25rem 0;
+  opacity: 0.9;
+}
+
+.skill-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.skill-icons img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  transition: transform 200ms ease;
+}
+
+.skill-icons img:hover {
+  transform: scale(1.15);
+} */
+
+
+.picofme {
+  border: 4px solid #ffffff;
+  transition: border 300ms, filter 300ms, transform 300ms;
+  width: 200px;
+  height: 200px;
+  border-radius: 60%;
+  opacity: 0;
+  animation: fadeIn ease 3s forwards, scaleDown ease 3s forwards;
+}
+
+.About-Me:hover {
+  transform: scale(1.1);
+  transition-duration: 300ms;
+  transition-timing-function: ease;
+}
+
+.About-Me-Text {
+  opacity: 0%;
+  position: relative;
+}
+
+.About-Me {
+  opacity: 0;
+  animation: fadeIn ease 3s forwards, scaleDown ease 3s forwards;
+  padding: 2px;
+}
+
+.reveal-text {
+  font-weight: 500;
+  font-size: 50px;
+  margin: 0;
+  opacity: 0;
+  animation: fadeIn ease 3s forwards, scaleDown ease 3s forwards;
+}
+
+.my-status {
+  opacity: 0;
+  animation: fadeIn ease 3s forwards, scaleDown ease 3s forwards;
+}
+
+.logoToledo:hover + .About-Me-Text {
+  animation: fadeIn 500ms ease forwards;
+  transform: scale(1.01);
+  transition: transform 1s ease;
+}
+
+.about-section {
+  opacity: 0;
+  animation: fadeIn ease 3s forwards, scaleDown ease 3s forwards;
+}
+
+.skill-section {
+  opacity: 0;
+  animation: fadeIn ease 3s forwards, scaleDown ease 3s forwards;
+}
+
+.main-Nav {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 9999;
+
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  gap: 10px;
+
+  color: white;
+  background: #222;
+  border-radius: 6px;
+  text-align: center;
+
+  opacity: 0;
+  animation: fadeIn ease 3s forwards;
+}
+
+.main-Nav a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 10px;
+  border-radius: 6px;
+}
+
+.main-Nav a:hover {
+  background: #444;
+}
+
+.reach-out {
+  color: #888;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+@keyframes scaleDown {
+  from { transform: scale(1.05); }
+  to { transform: scale(1); }
+}
+
+@keyframes scaleUp {
+  from { transform: scale(1); }
+  to { transform: scale(1.05); }
+}

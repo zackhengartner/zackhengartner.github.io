@@ -1,0 +1,203 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+a {
+  font-weight: 500;
+  color: #fdfdfd;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #000000;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  top: 0;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.theme-checkbox {
+  display: flex;
+  left: 10px;
+  position: absolute;
+  top: 10px;
+}
+
+.current-time {
+  top: 0;
+  padding: 0.5em;
+  text-align: center;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.menu-item,
+.menu-open-button {
+  display: grid;
+  place-items: center;
+  width: 70px;
+  height: 70px;
+  border-radius: 100%;
+  position: absolute;
+  color: #ffffff;
+  transition: transform ease-out 200ms;
+}
+
+.menu-open {
+  display: none;
+}
+
+.internal-text {
+  margin: 0 auto;
+  display: block;
+  position: absolute;
+  font-size: small;
+  font-weight: 200;
+  color: rgb(255, 255, 255);
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  transition: transform 200ms;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.menu-open:checked + .menu-open-button .line-1 {
+  transform: translate3d(0, 0, 0) rotate(45deg);
+}
+.menu-open:checked + .menu-open-button .line-2 {
+  transform: translate3d(0, 0, 0) scale(0, 1);
+}
+.menu-open:checked + .menu-open-button .line-3 {
+  transform: translate3d(0, 0, 0) rotate(-45deg);
+}
+
+.menu {
+  position: relative;
+  display: grid;
+  place-items: center;
+  margin: 0 auto;
+  width: 260px;
+  height: 260px;
+  font-size: 26px;
+  text-align: center;
+  padding: 2em;
+}
+
+.menu-item {
+  transition-duration: 0.2s;
+}
+
+.menu-open-button {
+  background-color: initial;
+  background-image: linear-gradient(#242424, #1f1d1d);
+  z-index: 2;
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition-duration: 0.3s;
+  transform: scale(1.1, 1.1) translate3d(0, 0, 0);
+  cursor: pointer;
+}
+.menu-open-button:hover {
+  transform: scale(1.2, 1.2) translate3d(0, 0, 0);
+}
+
+.menu-open:checked + .menu-open-button {
+  transition-timing-function: linear;
+  transition-duration: 0.2s;
+  transform: scale(1, 1) translate3d(0, 0, 0);
+}
+
+.menu-open:checked ~ .menu-item {
+  transition-duration: 0.4s;
+  transition-timing-function: cubic-bezier(0.2, 1, 0.2, 1.2);
+}
+
+.menu-open:checked ~ .menu-item:nth-child(3) {
+  transform: translate3d(0.08361px, -104.99997px, 0);
+}
+.menu-open:checked ~ .menu-item:nth-child(4) {
+  transition-delay: 0.08s;
+  transform: translate3d(90.9466px, -52.47586px, 0);
+}
+.menu-open:checked ~ .menu-item:nth-child(5) {
+  transition-delay: 0.16s;
+  transform: translate3d(90.9466px, 52.47586px, 0);
+}
+.menu-open:checked ~ .menu-item:nth-child(6) {
+  transition-delay: 0.24s;
+  transform: translate3d(0.08361px, 104.99997px, 0);
+}
+.menu-open:checked ~ .menu-item:nth-child(7) {
+  transition-delay: 0.32s;
+  transform: translate3d(-90.86291px, 52.62064px, 0);
+}
+.menu-open:checked ~ .menu-item:nth-child(8) {
+  transition-delay: 0.4s;
+  transform: translate3d(-91.03006px, -52.33095px, 0);
+}
+.menu-open:checked ~ .menu-item:nth-child(9) {
+  transition-delay: 0.48s;
+  transform: translate3d(-0.25084px, -104.9997px, 0);
+}
+
+.menu-open-button {
+  box-shadow: 3px 3px 10px 0 rgba(0, 0, 0, 0.5);
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.12);
+}
+
+.skills-header {
+  position: relative;
+  display: grid;
+  padding: 2em;
+}
+
+html, body {
+  scroll-behavior: smooth;
+}
+
