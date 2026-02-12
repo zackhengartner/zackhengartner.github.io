@@ -28,6 +28,14 @@ import altiumLogo from "./assets/altiumLogo.png";
 import ltspiceLogo from "./assets/ltspiceLogo.png";
 import matlabLogo from "./assets/matlabLogo.png";
 
+//Project Logos
+import webDev from "./assets/webdev.png";
+import automation from "./assets/automation.png";
+import compressor from "./assets/comp.png";
+import database from "./assets/database.png";
+import graphtheory from "./assets/graphtheory.png";
+
+
 
 import "./App.css";
 
@@ -53,7 +61,7 @@ export default function App() {
         <a href="#about">About Me</a>
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
-        <a href="#socials">Socials</a>
+        <a href="#experience">Experience</a>
       </nav>
 
       <section id="about" className="page bg1">
@@ -74,7 +82,7 @@ export default function App() {
             <p><em>Hint: Hover Over Logo</em></p>
             <img src={toledoLogo} className="logoToledo" alt="Toledo logo" />
             <p className="About-Me-Text">
-              I currently attend the <strong>University of Toledo</strong>, studying Computer Science & Engineering. The CSE program is in partnership with <strong>LCCC </strong>
+              I currently attend the <strong>University of Toledo</strong>, studying Computer Science & Engineering. My CSE program is in partnership with <strong>LCCC </strong>
               and allows me to take my classes from a satellite campus in North Ridgeville
             </p>
           </div>
@@ -85,104 +93,113 @@ export default function App() {
         <div className="page-inner">
           <div className="skill-section">
             <h1 className="skills-header">Skills: (Programming Languages, Software, IDEs & Tools)</h1>
-            <h2 className="coding-lang">Coding Languages:</h2>
-            <div className ="img-grid">
-              <div className ="img1">
-                <img src={javaLogo} alt="javaLogo" />
-                <p>My first programming language. Used it to learn OOP and data structures</p>
-              </div>
+            <div className="grid appear">
+              <h2 className="coding-lang">Coding Languages:</h2>
+              <div className ="img-grid">
+                <div className ="img1">
+                  <img src={javaLogo} alt="javaLogo" />
+                  <p>My first programming language. Used it to learn OOP and data structures</p>
+                </div>
+                <div className ="img4">
+                  <img src={cLogo} alt="cLogo" />
+                  <p>Learned and used at my time at Emerson while working on the firmware for product development</p>
+                </div>
 
-              <div className ="img4">
-                <img src={cLogo} alt="cLogo" />
-                <p>Learned and used at my time at Emerson while working on the firmware for product development</p>
-              </div>
+                <div className ="img5">
+                  <img src={cplusplusLogo} alt="cplusplusLogo" />
+                  <p>My most used & favorite programming lanugage. Picked up during my non-linear data structures course</p>
+                </div>
 
-              <div className ="img5">
-                <img src={cplusplusLogo} alt="cplusplusLogo" />
-                <p>My most used & favorite programming lanugage. Picked up during my non-linear data structures course</p>
-              </div>
+                <div className ="img7">
+                  <img src={pythonLogo} alt="pythonLogo" />
+                  <p>Used for my personal projects, most notably my automated job application program</p>
+                </div>
 
-              <div className ="img7">
-                <img src={pythonLogo} alt="pythonLogo" />
-                <p>Used for my personal projects, most notably my automated job application program</p>
-              </div>
+                <div className ="img3">
+                  <img src={htmlLogo} alt="htmlLogo" />
+                  <p>One of my most recent languages. Used it to make this website you're currently looking at!</p>
+                </div>
 
-              <div className ="img3">
-                <img src={htmlLogo} alt="htmlLogo" />
-                <p>One of my most recent languages. Used it to make this website you're currently looking at!</p>
-              </div>
+                <div className ="img2">
+                  <img src={cssLogo} alt="cssLogo" />
+                  <p>Similarly to html, learned for the purpose of web dev so I could make my own portfolio</p>
+                </div>
 
-              <div className ="img2">
-                <img src={cssLogo} alt="cssLogo" />
-                <p>Similarly to html, learned for the purpose of web dev so I could make my own portfolio</p>
-              </div>
+                <div className ="img6">
+                  <img src={powerShell} alt="powerShell" />
+                  <p>Gained knowledge scripting for an Azure Pipeline I worked on while at Emerson</p>
+                </div>
 
-              <div className ="img6">
-                <img src={powerShell} alt="powerShell" />
-                <p>Gained knowledge scripting for an Azure Pipeline I worked on while at Emerson</p>
-              </div>
+                <div className ="img8">
+                  <img src={bashLogo} alt="bashLogo" />
+                  <p>Alike PowerShell, gained experience through pipelines for an automation project at Emerson</p>
+                </div>
 
-              <div className ="img8">
-                <img src={bashLogo} alt="bashLogo" />
-                <p>Alike PowerShell, gained experience through pipelines for an automation project at Emerson</p>
               </div>
+            </div>
+            
+            <div className ="grid appear">
+              <h2 className="coding-lang">Tools & IDEs:</h2>
+              <div className ="img-grid2">
 
+                <div className ="img1-2">
+                  <img src={vs2022} className ="vs2022" alt="vs2022" />
+                  <p>My most used IDE. Gained lots of experience throughout coursework and personal projects mainly using C++</p>
+                </div> 
+
+                <div className ="img2-2">
+                  <img src={vsCode} className ="vsCode" alt="vsCode" />
+                  <p>Gained lots of experience in VS Code from personal projects using Python. Currently use for writing C at Emerson</p>
+                </div>
+
+                <div className="img3-2">
+                  <img src={eclipseLogo} className ="eclipseLogo" alt="eclipseLogo" />
+                  <p>My first ever IDE that I was introduced to through my coursework. Used primarily with Java up until non-linear data structures</p>
+                </div>
+
+                <div className ="img4-2">
+                  <img src={azureDevops} alt="azureDevops" />
+                  <p>Introduced to while working at Emerson. I commonly used it for making pipelines, storing remote repos, and tracking work tasks</p>
+                </div>
+
+                <div className ="img5-2">
+                  <img src={gitLogo} alt="gitLogo" />
+                  <p>Also introduced to while working at Emerson. Something I quickly started using for my personal projects. So very useful!</p>
+                </div>
+
+                <div className ="img6-2">
+                  <img src={mplabLogo}  alt="mplabLogo" />
+                  <p>Used to program target boards during product development at Emerson. Very useful and rather easy to navigate UI</p>
+                </div>
+
+              </div>
+            </div>
+            <div className ="grid appear">
+              <h2 className="coding-lang">Software:</h2>
+              <div class ="img-grid3">
+                <div className ="img1-3">
+                  <img src={altiumLogo} alt="altiumLogo" />
+                  <p>Trained to use while working at Emerson. Lots of fun learning to build schematics and make PCB layouts</p>
+                </div>
+
+                <div className ="img2-3">
+                  <img src={ltspiceLogo} alt="ltspiceLogo" />
+                  <p>Used predominantly throughout my coursework. Most commonly during Circuits and Electronics</p>
+                </div>
+
+                <div className ="img3-3">
+                  <img src={matlabLogo} alt="matlabLogo" />
+                  <p>Was introduced to during my coursework and further experience from the Arduino Engineering Kit</p>
+                </div>
+                
+              </div>
             </div>
 
-            <h2 className="coding-lang">Tools & IDEs:</h2>
-            <div className ="img-grid2">
-
-              <div className ="img1-2">
-                <img src={vs2022} className ="vs2022" alt="vs2022" />
-                <p>My most used IDE. Gained lots of experience throughout coursework and personal projects mainly using C++</p>
-              </div> 
-
-              <div className ="img2-2">
-                <img src={vsCode} className ="vsCode" alt="vsCode" />
-                <p>Gained lots of experience in VS Code from personal projects using Python. Currently use for writing C at Emerson</p>
-              </div>
-
-              <div className="img3-2">
-                <img src={eclipseLogo} className ="eclipseLogo" alt="eclipseLogo" />
-                <p>My first ever IDE that I was introduced to through my coursework. Used primarily with Java up until non-linear data structures</p>
-              </div>
-
-              <div className ="img4-2">
-                <img src={azureDevops} alt="azureDevops" />
-                <p>Introduced to while working at Emerson. I commonly used it for making pipelines, storing remote repos, and tracking work tasks</p>
-              </div>
-
-              <div className ="img5-2">
-                <img src={gitLogo} alt="gitLogo" />
-                <p>Also introduced to while working at Emerson. Something I quickly started using for my personal projects. So very useful!</p>
-              </div>
-
-              <div className ="img6-2">
-                <img src={mplabLogo}  alt="mplabLogo" />
-                <p>Used to program target boards during product development at Emerson. Very useful and rather easy to navigate UI</p>
-              </div>
-
+            <div className="fadeMove">
+              <p><strong>Programming Languages:</strong> Java, JavaScript, Python, C++, C, HTML, CSS, SQL, x86, ARM, Bash, PowerShell</p>
+              <p><strong>Tools & IDEs:</strong> Eclipse, Visual Studios 2022, VS Code, IAR Workbench, Git, Azure Devops, MPLAB</p>
+              <p><strong>Software:</strong> Microsoft Office Suite, Adobe Creative Cloud, Altium, LTspice, MATLAB</p>
             </div>
-
-            <h2 className="coding-lang">Software:</h2>
-            <div class ="img-grid3">
-              <div className ="img1-3">
-                <img src={altiumLogo} alt="altiumLogo" />
-                <p>Trained to use while working at Emerson. Lots of fun learning to build schematics and make PCB layouts</p>
-              </div>
-
-              <div className ="img2-3">
-                <img src={ltspiceLogo} alt="ltspiceLogo" />
-                <p>Used predominantly throughout my coursework. Most commonly during Circuits and Electronics</p>
-              </div>
-
-              <div className ="img3-3">
-                <img src={matlabLogo} alt="matlabLogo" />
-                <p>Was introduced to during my coursework and further experience from the Arduino Engineering Kit</p>
-              </div>
-              
-            </div>
-
             {/* <nav className="menu">
               <input type="checkbox" className="menu-open" name="menu-open" id="menu-open" />
               <label className="menu-open-button" htmlFor="menu-open">
@@ -196,10 +213,6 @@ export default function App() {
               <img className="menu-item blue" src={htmlLogo} alt="HTML" />
               <img className="menu-item indigo" src={cssLogo} alt="CSS" />
             </nav> */}
-
-            <p><strong>Programming Languages:</strong> Java, JavaScript, Python, C++, C, HTML, CSS, SQL, x86, ARM, Bash, PowerShell</p>
-            <p><strong>Tools & IDEs:</strong> Eclipse, Visual Studios 2022, VS Code, IAR Workbench, Git, Azure Devops, MPLAB</p>
-            <p><strong>Software:</strong> Microsoft Office Suite, Adobe Creative Cloud, Altium, LTspice, MATLAB</p>
           </div>
         </div>
       </section>
@@ -208,23 +221,69 @@ export default function App() {
         <div className="page-inner">
           <div className="projects-section">
             <h1 className="projects-header">Projects</h1>
+            <div className ="all-cards">
+
+              <div className ="proj1 card">
+                <img src = {webDev} className="webLogo" />
+                <div className="container">
+                  <h2><strong>Portfolio</strong></h2>
+                  <p>Developed this website that you see infront of you, using HTML, CSS, and JavaScript!</p>
+                </div>
+              </div>
+
+              <div className ="proj2 card">
+                <img src = {automation} className="automation" />
+                <div className="container">
+                  <h2><strong>Application Automation</strong></h2>
+                  <p>Developed a python script which uses the playwright extension to allow for job applications to be automated if they are filled out using the workday platform </p>
+                </div>
+              </div>
+
+              <div className ="proj3 card">
+                <img src = {compressor} className="compressor" />
+                <div className="container">
+                  <h2><strong>Huffman Tree Encoder/Decoder</strong></h2>
+                  <p>Created a program that implements Huffman trees to encode and decode command line given input files allowing for up to 70% file size reduction</p>
+                </div>
+              </div>
+
+              <div className ="proj4 card">
+                <img src = {database} className="database" />
+                <div className="container">
+                  <h2><strong>Internships/Co-op Database using SQLite</strong></h2>
+                  <p>Designed a program using SQLite to manage a database for co-ops/internships which demonstrates core SQL operations (SORT, SELECT, CREATE, etc.) </p>
+                </div>
+              </div>
+
+              <div className ="proj5 card">
+                <img src = {graphtheory} className="graphtheory" />
+                <div className="container">
+                  <h2><strong>Minimum Spanning Tree/Graph Theory</strong></h2>
+                  <p>Implemented Kruskal and Prim’s algorithms in an application that took command line inputs to create a minimum spanning tree for better understanding of graph theory</p>
+                </div>
+              </div>
+
+            </div>
           </div>
         </div>
       </section>
 
-      <section id="socials" className="page bg4">
+      <section id="experience" className="page bg4">
         <div className="page-inner">
           <div className="social-links">
-            <a href="https://github.com/zackhengartner" target="_blank" rel="noreferrer">
+            <h1>Experiences</h1>
+            <div className ="footer">
+              <a href="https://github.com/zackhengartner" target="_blank" rel="noreferrer">
               <img src={githubLogo} className="logo" alt="Github logo" />
-            </a>
-            <a href="https://www.linkedin.com/in/zackery-hengartner/" target="_blank" rel="noreferrer">
-              <img src={linkedInLogo} className="logo linkedIn" alt="LinkedIn logo" />
-            </a>
-            <p className="reach-out">Places To Find Me!</p>
-            <a href="https://docs.google.com/document/d/1RfPMLSREV4rFeBKzbb2UuF9oLAcGmmhJ7L4Ys8Jw_GY/edit?usp=sharing" target="_blank" rel="noopener noreferrer" >
-            Resume
-            </a>
+              </a>
+              <a href="https://www.linkedin.com/in/zackery-hengartner/" target="_blank" rel="noreferrer">
+                <img src={linkedInLogo} className="logo linkedIn" alt="LinkedIn logo" />
+              </a>
+              <p className="reach-out">Places To Find Me!</p>
+              <a href="https://docs.google.com/document/d/1RfPMLSREV4rFeBKzbb2UuF9oLAcGmmhJ7L4Ys8Jw_GY/edit?usp=sharing" target="_blank" rel="noopener noreferrer" >
+              Resume
+              </a>
+            </div>
           </div>
         </div>
       </section>
