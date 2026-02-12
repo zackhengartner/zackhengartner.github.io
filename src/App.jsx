@@ -86,34 +86,101 @@ export default function App() {
           <div className="skill-section">
             <h1 className="skills-header">Skills: (Programming Languages, Software, IDEs & Tools)</h1>
             <h2 className="coding-lang">Coding Languages:</h2>
-            <div class ="img-grid">
-              <img src={javaLogo} className ="img1" alt="javaLogo" />
-              <img src={cLogo} className ="img4" alt="cLogo" />
-              <img src={cplusplusLogo} className ="img5" alt="cplusplusLogo" />
-              <img src={pythonLogo} className ="img7" alt="pythonLogo" />
+            <div className ="img-grid">
+              <div className ="img1">
+                <img src={javaLogo} alt="javaLogo" />
+                <p>My first programming language. Used it to learn OOP and data structures</p>
+              </div>
 
-              <img src={htmlLogo} className ="img3" alt="htmlLogo" />
-              <img src={cssLogo} className ="img2" alt="cssLogo" />
-              <img src={powerShell} className ="img6" alt="powerShell" />
-              <img src={bashLogo} className ="img8" alt="bashLogo" />
+              <div className ="img4">
+                <img src={cLogo} alt="cLogo" />
+                <p>Learned and used at my time at Emerson while working on the firmware for product development</p>
+              </div>
+
+              <div className ="img5">
+                <img src={cplusplusLogo} alt="cplusplusLogo" />
+                <p>My most used & favorite programming lanugage. Picked up during my non-linear data structures course</p>
+              </div>
+
+              <div className ="img7">
+                <img src={pythonLogo} alt="pythonLogo" />
+                <p>Used for my personal projects, most notably my automated job application program</p>
+              </div>
+
+              <div className ="img3">
+                <img src={htmlLogo} alt="htmlLogo" />
+                <p>One of my most recent languages. Used it to make this website you're currently looking at!</p>
+              </div>
+
+              <div className ="img2">
+                <img src={cssLogo} alt="cssLogo" />
+                <p>Similarly to html, learned for the purpose of web dev so I could make my own portfolio</p>
+              </div>
+
+              <div className ="img6">
+                <img src={powerShell} alt="powerShell" />
+                <p>Gained knowledge scripting for an Azure Pipeline I worked on while at Emerson</p>
+              </div>
+
+              <div className ="img8">
+                <img src={bashLogo} alt="bashLogo" />
+                <p>Alike PowerShell, gained experience through pipelines for an automation project at Emerson</p>
+              </div>
+
             </div>
 
             <h2 className="coding-lang">Tools & IDEs:</h2>
-            <div class ="img-grid2">
-              <img src={vs2022} className ="img1-2" alt="vs2022" />
-              <img src={vsCode} className ="img2-2" alt="vsCode" />
-              <img src={eclipseLogo} className ="img3-2" alt="eclipseLogo" />
+            <div className ="img-grid2">
 
-              <img src={azureDevops} className ="img4-2" alt="azureDevops" />
-              <img src={gitLogo} className ="img5-2" alt="gitLogo" />
-              <img src={mplabLogo} className ="img6-2" alt="mplabLogo" />
+              <div className ="img1-2">
+                <img src={vs2022} className ="vs2022" alt="vs2022" />
+                <p>My most used IDE. Gained lots of experience throughout coursework and personal projects mainly using C++</p>
+              </div> 
+
+              <div className ="img2-2">
+                <img src={vsCode} className ="vsCode" alt="vsCode" />
+                <p>Gained lots of experience in VS Code from personal projects using Python. Currently use for writing C at Emerson</p>
+              </div>
+
+              <div className="img3-2">
+                <img src={eclipseLogo} className ="eclipseLogo" alt="eclipseLogo" />
+                <p>My first ever IDE that I was introduced to through my coursework. Used primarily with Java up until non-linear data structures</p>
+              </div>
+
+              <div className ="img4-2">
+                <img src={azureDevops} alt="azureDevops" />
+                <p>Introduced to while working at Emerson. I commonly used it for making pipelines, storing remote repos, and tracking work tasks</p>
+              </div>
+
+              <div className ="img5-2">
+                <img src={gitLogo} alt="gitLogo" />
+                <p>Also introduced to while working at Emerson. Something I quickly started using for my personal projects. So very useful!</p>
+              </div>
+
+              <div className ="img6-2">
+                <img src={mplabLogo}  alt="mplabLogo" />
+                <p>Used to program target boards during product development at Emerson. Very useful and rather easy to navigate UI</p>
+              </div>
+
             </div>
 
             <h2 className="coding-lang">Software:</h2>
             <div class ="img-grid3">
-              <img src={altiumLogo} className ="img1-3" alt="altiumLogo" />
-              <img src={ltspiceLogo} className ="img2-3" alt="ltspiceLogo" />
-              <img src={matlabLogo} className ="img3-3" alt="matlabLogo" />
+              <div className ="img1-3">
+                <img src={altiumLogo} alt="altiumLogo" />
+                <p>Trained to use while working at Emerson. Lots of fun learning to build schematics and make PCB layouts</p>
+              </div>
+
+              <div className ="img2-3">
+                <img src={ltspiceLogo} alt="ltspiceLogo" />
+                <p>Used predominantly throughout my coursework. Most commonly during Circuits and Electronics</p>
+              </div>
+
+              <div className ="img3-3">
+                <img src={matlabLogo} alt="matlabLogo" />
+                <p>Was introduced to during my coursework and further experience from the Arduino Engineering Kit</p>
+              </div>
+              
             </div>
 
             {/* <nav className="menu">
@@ -155,6 +222,9 @@ export default function App() {
               <img src={linkedInLogo} className="logo linkedIn" alt="LinkedIn logo" />
             </a>
             <p className="reach-out">Places To Find Me!</p>
+            <a href="https://docs.google.com/document/d/1RfPMLSREV4rFeBKzbb2UuF9oLAcGmmhJ7L4Ys8Jw_GY/edit?usp=sharing" target="_blank" rel="noopener noreferrer" >
+            Resume
+            </a>
           </div>
         </div>
       </section>
