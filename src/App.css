@@ -101,8 +101,6 @@ html, body {
   padding: 1.5em;
   will-change: filter;
   transition: filter 300ms, transform 300ms, border 300ms;
-  opacity: 0;
-  animation: fadeIn ease 3s forwards, scaleDown ease 3s forwards;
   transform: scale(1);
   transition: transform ease 300ms;
 }
@@ -113,8 +111,6 @@ html, body {
   padding: 1.5em;
   will-change: filter;
   transition: filter ease 300ms, transform ease 300ms, border ease 300ms;
-  opacity: 0;
-  animation: fadeIn ease 3s forwards, scaleDown ease 3s forwards;
 }
 
 .logo:hover {
@@ -435,11 +431,7 @@ html, body {
   animation-range: entry 20% cover 35%;
 }
 
-.skills-header, .fadeMove {
-  animation: fadeMove both;
-  animation-timeline: view();
-  animation-duration: 1s;
-}
+
 
 .card {
   display: grid;
@@ -487,6 +479,128 @@ html, body {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
+.notification {
+  animation: translateDown both;
+  animation-timeline: view();
+  animation-range: entry 10% cover 30%;
+  display: flex;
+  flex-direction: column;
+  isolation: isolate;
+  position: relative;
+  width: 50rem;
+  height: 8rem;
+  background: #242424;
+  border-radius: 1rem;
+  overflow: hidden;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 16px;
+  --gradient: linear-gradient(to bottom, #ffffff, #ffffff, #ffffff);
+  --color: #32a6ff
+}
+
+.notification:before {
+  position: absolute;
+  content: "";
+  inset: 0.0625rem;
+  border-radius: 0.9375rem;
+  background: #201f1f;
+  z-index: 2;
+}
+
+.notification:after {
+  position: absolute;
+  content: "";
+  width: 0.25rem;
+  inset: 0.65rem auto 0.65rem 0.5rem;
+  border-radius: 0.125rem;
+  background: var(--gradient);
+  transition: transform 300ms ease;
+  z-index: 4;
+}
+
+.notification:hover:after {
+  transform: translateX(0.15rem)
+}
+
+.notititle {
+  color: white;
+  text-align: left;
+  padding: 0.65rem 0.25rem 0.4rem 1.25rem;
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: transform 300ms ease;
+  z-index: 5;
+}
+
+.notification:hover .notititle {
+  transform: translateX(0.15rem)
+}
+
+.notibody {
+  color: #99999d;
+  text-align: left;
+  padding: 0 1.25rem;
+  transition: transform 300ms ease;
+  z-index: 5;
+}
+
+.notification:hover .notibody {
+  transform: translateX(0.25rem)
+}
+
+.Emerson,
+.notiborderglow {
+  position: absolute;
+  width: 20rem;
+  height: 20rem;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle closest-side at center, white, transparent);
+  opacity: 0;
+  transition: opacity 300ms ease;
+}
+
+.Emerson {
+  z-index: 3;
+}
+
+.notiborderglow {
+  z-index: 1;
+}
+
+.notification:hover .Emerson {
+  opacity: 0.1
+}
+
+.notification:hover .notiborderglow {
+  opacity: 0.1
+}
+
+.note {
+  color: var(--color);
+  position: fixed;
+  top: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  font-size: 0.9rem;
+  width: 75%;
+}
+
+.jobs{
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;          /* controls space between each notification */
+  align-items: center;  /* optional: keeps them centered */
+}
+
+.social-links
+{
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+
 @keyframes fadeIn {
   to { opacity: 1;}
 }
@@ -514,4 +628,10 @@ html, body {
 @keyframes zeroToHero {
   from {opacity: 0;}
   to {opacity: 1;}
+}
+
+@keyframes translateDown {
+  from {opacity: 0; transform: translateX(50px); filter: blur(5px);}
+  to {opacity: 1; transform: translateX(0); filter: blur(0);}
+
 }

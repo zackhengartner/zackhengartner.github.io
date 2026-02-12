@@ -271,7 +271,38 @@ export default function App() {
       <section id="experience" className="page bg4">
         <div className="page-inner">
           <div className="social-links">
-            <h1>Experiences</h1>
+            <h1>Experience</h1>
+
+            <div className="jobs">
+              <div class="notification">
+                <div class="Emerson"></div>
+                <div class="notiborderglow"></div>
+                <div class="notititle">Emerson | Jan 2026 - Apr 2026</div>
+                <div class="notibody">Utilize Azure Pipelines to automate document creation using Bash and PowerShell scripts</div>
+                <div class="notibody">Work alongside firmware team to implement different device functionality for product development</div>
+                <div class="notibody">Perform testing and data collection for product validation</div>
+              </div>
+
+              <div class="notification">
+                <div class="Emerson"></div>
+                <div class="notiborderglow"></div>
+                <div class="notititle">LCCC | Aug 2025 - Dec 2025</div>
+                <div class="notibody">Assist students with solving programming errors</div>
+                <div class="notibody">Test and grade students submitted assignments</div>
+                <div class="notibody">Tutor students that come in during tutoring hours</div>
+              </div>
+
+              <div class="notification">
+                <div class="Emerson"></div>
+                <div class="notiborderglow"></div>
+                <div class="notititle">LCCC | Feb 2025 - May 2025</div>
+                <div class="notibody">Ensure students are on task and making use of the time given to them during lab</div>
+                <div class="notibody">Help students with programming problems they encounter</div>
+                <div class="notibody">Safeguard/monitor the lab to prevent destruction to expensive equipment</div>
+              </div>
+            </div>
+              
+
             <div className ="footer">
               <a href="https://github.com/zackhengartner" target="_blank" rel="noreferrer">
               <img src={githubLogo} className="logo" alt="Github logo" />
