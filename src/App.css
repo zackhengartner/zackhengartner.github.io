@@ -71,10 +71,10 @@ html, body {
 
 .bg3 {
   background-size: cover;
-  background-color: #ffffff;
+  background-color: #242424;
   background-position: center;
   background-repeat: no-repeat;
-  color: #242424;
+  color: #ffffff;
 }
 
 .bg4 {
@@ -93,7 +93,7 @@ html, body {
 }
 
 .bg3 p {
-  color: #242424;
+  color: #ffffff;
 }
 
 .logo {
@@ -475,7 +475,6 @@ html, body {
 }
 
 .card:hover {
-  filter: drop-shadow(0 0 2em #000000aa);
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
