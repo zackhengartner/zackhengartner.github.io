@@ -278,8 +278,8 @@ export default function App() {
                 <div class="Emerson"></div>
                 <div class="notiborderglow"></div>
                 <div class="notititle">Emerson - Electrical Engineering Co-op | Jan 2026 - Apr 2026</div>
-                <div class="notibody">Utilize Azure Pipelines to automate document creation using Bash and PowerShell scripts</div>
-                <div class="notibody">Work alongside firmware team to implement different device functionality for product development</div>
+                <div class="notibody">Implement embedded device functionality in C for new product development</div>
+                <div class="notibody">Utilize Azure Pipelines with Ruby and Bash scripts to automate document generation</div>
                 <div class="notibody">Perform testing and data collection for product validation</div>
               </div>
 
