@@ -34,6 +34,7 @@ import automation from "./assets/automation.png";
 import compressor from "./assets/comp.png";
 import database from "./assets/database.png";
 import graphtheory from "./assets/graphtheory.png";
+import reverseEngineering from "./assets/reverseEngineering.png";
 
 
 
@@ -256,10 +257,10 @@ export default function App() {
               </div>
 
               <div className ="proj5 card">
-                <img src = {graphtheory} className="graphtheory" />
+                <img src = {reverseEngineering} className="reverseEngineering" />
                 <div className="container">
-                  <h2><strong>Minimum Spanning Tree/Graph Theory</strong></h2>
-                  <p>Implemented Kruskal and Prim’s algorithms in an application that took command line inputs to create a minimum spanning tree for better understanding of graph theory</p>
+                  <h2><strong>Zackmophobia</strong></h2>
+                  <p>Conducted reverse engineering analysis on Phasmophobia to create a dll which when injected, hooks into the game's functions and modifies different behavior</p>
                 </div>
               </div>
 
