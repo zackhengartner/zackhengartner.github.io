@@ -34,7 +34,7 @@ import automation from "./assets/automation.png";
 import compressor from "./assets/comp.png";
 import database from "./assets/database.png";
 import graphtheory from "./assets/graphtheory.png";
-import reverseEngineering from "./assets/reverseEngineering.png";
+import dllinjection from "./assets/dllinjection.png";
 
 
 
@@ -257,7 +257,7 @@ export default function App() {
               </div>
 
               <div className ="proj5 card">
-                <img src = {reverseEngineering} className="reverseEngineering" />
+                <img src = {dllinjection} className="dllinjection" />
                 <div className="container">
                   <h2><strong>Zackmophobia</strong></h2>
                   <p>Conducted reverse engineering analysis on Phasmophobia to create a dll which when injected, hooks into the game's functions and modifies different behavior</p>
