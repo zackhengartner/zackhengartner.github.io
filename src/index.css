@@ -98,7 +98,6 @@ button:focus-visible {
 .internal-text {
   margin: 0 auto;
   display: block;
-  position: absolute;
   font-size: small;
   font-weight: 200;
   color: rgb(255, 255, 255);

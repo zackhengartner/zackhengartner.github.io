@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from "react";
 import toledoLogo from "./assets/toledo-logo.png";
 import githubLogo from "./assets/git_hub_logo.png";
 import linkedInLogo from "./assets/LinkedIn_Logo.png";
@@ -10,7 +9,7 @@ import cLogo from "./assets/cLogo.png";
 import cplusplusLogo from "./assets/cplusplus.png";
 import htmlLogo from "./assets/htmlLogo.png";
 import cssLogo from "./assets/cssLogo.png";
-import picofme from "./assets/zockidy.png";
+import picofme from "./assets/hsreal3.jpg";
 import javaScript from "./assets/javaScript.png";
 import bashLogo from "./assets/bashLogo.png";
 import powerShell from "./assets/powerShell.png";
@@ -36,32 +35,93 @@ import database from "./assets/database.png";
 import graphtheory from "./assets/graphtheory.png";
 import dllinjection from "./assets/dllinjection.png";
 
+//Travel Photos
+import travel1 from "./assets/travel1.jpg";
+import travel2 from "./assets/travel2.jpg";
+import travel3 from "./assets/travel3.jpg";
+import travel4 from "./assets/travel4.jpg";
+import travel5 from "./assets/travel5.jpg";
+import travel6 from "./assets/travel6.jpg";
+import travel7 from "./assets/travel7.jpg";
+import travel8 from "./assets/travel8.jpg";
+import travel9 from "./assets/travel9.jpg";
+import travel10 from "./assets/travel10.jpg";
+import travel11 from "./assets/travel11.jpg";
+import travel12 from "./assets/travel12.jpg";
+import travel13 from "./assets/travel13.jpg";
 
+//Map for travel page
+import Map from "./assets/Map.jsx";
+
+//Card Carousel
+import { useState, useEffect, useRef } from "react";
+import Flickity from "flickity";
+import "flickity/css/flickity.css";
 
 import "./App.css";
 
-function CurrentTime() {
-  const [time, setTime] = useState(new Date());
+export default function App() {
+  const carouselRef = useRef(null);
+  const travelRef = useRef(null);
 
   useEffect(() => {
-    const timer = setInterval(() => setTime(new Date()), 1000);
-    return () => clearInterval(timer);
+    if (!carouselRef.current) return;
+
+    const flkty = new Flickity(carouselRef.current, {
+      cellAlign: "center",
+      contain: true,
+      wrapAround: true,
+      pageDots: true,
+      prevNextButtons: true,
+      draggable: true,
+      adaptiveHeight: true
+    });
+
+    setTimeout(() => flkty.resize(), 50);
+
+    const handleResize = () => flkty.resize();
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+      flkty.destroy();
+    };
   }, []);
 
-  return (
-    <p className="current-time">
-      {time.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit", second: "2-digit" })}
-    </p>
-  );
-}
+  useEffect(() => {
+    if (!travelRef.current) return;
 
-export default function App() {
+    const flkty = new Flickity(travelRef.current, {
+    cellAlign: "center",
+    contain: true,
+    wrapAround: true,
+    pageDots: false,
+    prevNextButtons: false,
+    draggable: false,
+    adaptiveHeight: true,
+    autoPlay: 3000,
+    selectedAttraction: 0.01,
+    friction: 0.15
+  });
+
+    setTimeout(() => flkty.resize(), 50);
+
+    const handleResize = () => flkty.resize();
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+      flkty.destroy();
+    };
+  }, []);
+
   return (
     <div className="app-container">
       <nav className="main-Nav">
         <a href="#about">About Me</a>
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
+        <a href="#travels">Travels</a>
         <a href="#experience">Experience</a>
       </nav>
 
@@ -76,7 +136,7 @@ export default function App() {
             <h1 className="reveal-text">
               <strong>Zackery Hengartner</strong>
             </h1>
-            <h2 className="my-status"><em>Electrical Engineer Co-op @ Emerson | Undergrad Student @ Utoledo</em></h2>
+            <h2 className="my-status"><em>Software Dev Intern @ UHM | Undergrad Student @ Utoledo</em></h2>
           </div>
 
           <div className="about-section">
@@ -222,46 +282,37 @@ export default function App() {
         <div className="page-inner">
           <div className="projects-section">
             <h1 className="projects-header">Projects</h1>
-            <div className ="all-cards">
 
-              <div className ="proj1 card">
-                <img src = {webDev} className="webLogo" />
-                <div className="container">
-                  <h2><strong>Portfolio</strong></h2>
-                  <p>Developed this website that you see infront of you, using HTML, CSS, and JavaScript!</p>
-                </div>
+            <div className="carousel" ref={carouselRef}>
+
+              <div className="carousel-cell">
+                <img src={webDev} alt="Portfolio" />
+                <h2>Portfolio</h2>
+                <p>Developed this website that you see infront of you, using HTML, CSS, and JavaScript!</p>
               </div>
 
-              <div className ="proj2 card">
-                <img src = {automation} className="automation" />
-                <div className="container">
-                  <h2><strong>Application Automation</strong></h2>
-                  <p>Developed a python script which uses the playwright extension to allow for job applications to be automated if they are filled out using the workday platform </p>
-                </div>
+              <div className="carousel-cell">
+                <img src={automation} alt="Automation" />
+                <h2>Application Automation</h2>
+                <p>Developed a python script which uses the playwright extension to allow for job applications to be automated if they are filled out using the workday platform</p>
               </div>
 
-              <div className ="proj3 card">
-                <img src = {compressor} className="compressor" />
-                <div className="container">
-                  <h2><strong>Huffman Tree Encoder/Decoder</strong></h2>
-                  <p>Created a program that implements Huffman trees to encode and decode command line given input files allowing for up to 70% file size reduction</p>
-                </div>
+              <div className="carousel-cell">
+                <img src={compressor} alt="Huffman" />
+                <h2>Huffman Encoder/Decoder</h2>
+                <p>Created a program that implements Huffman trees to encode and decode command line given input files allowing for up to 70% file size reduction</p>
               </div>
 
-              <div className ="proj4 card">
-                <img src = {database} className="database" />
-                <div className="container">
-                  <h2><strong>Internships/Co-op Database using SQLite</strong></h2>
-                  <p>Designed a program using SQLite to manage a database for co-ops/internships which demonstrates core SQL operations (SORT, SELECT, CREATE, etc.) </p>
-                </div>
+              <div className="carousel-cell">
+                <img src={database} alt="Database" />
+                <h2>SQLite Internship DB</h2>
+                <p>Designed a program using SQLite to manage a database for co-ops/internships which demonstrates core SQL operations (SORT, SELECT, CREATE, etc.)</p>
               </div>
 
-              <div className ="proj5 card">
-                <img src = {dllinjection} className="dllinjection" />
-                <div className="container">
-                  <h2><strong>Zackmophobia</strong></h2>
-                  <p>Conducted reverse engineering analysis on Phasmophobia to create a dll which when injected, hooks into the game's functions and modifies different behavior</p>
-                </div>
+              <div className="carousel-cell">
+                <img src={dllinjection} alt="DLL Project" />
+                <h2>Zackmophobia</h2>
+                <p>Conducted reverse engineering analysis on Phasmophobia to create a dll which when injected, hooks into the game's functions and modifies different behavior</p>
               </div>
 
             </div>
@@ -269,12 +320,94 @@ export default function App() {
         </div>
       </section>
 
-      <section id="experience" className="page bg4">
+      <section id="travels" className="page bg4">
+        <div className="page-inner">
+          <div className="travel-section">
+            <h1 className="travel-header">Travels</h1>
+            <p>Something about me is I am really into travel! I love the adventure of going to new places and have a lot of places I want to visit.</p>
+            <p>Below is a map of some of the places I have visited! I hope to continously update it as I explore more of the world.</p>
+            <Map />
+            <h2>Travel Photos:</h2>
+            <div className="travel-carousel" ref={travelRef}>
+
+              <div className="travel-cell">
+                <img src={travel13} alt="Tokyo" />
+                <h3>Sensō-ji</h3>
+              </div>
+
+              <div className="travel-cell">
+                <img src={travel12} alt="Tokyo" />
+                <h3>Shibuya Crossing</h3>
+              </div>
+
+              <div className="travel-cell">
+                <img src={travel11} alt="Tokyo" />
+                <h3>Near Ōtsuka Station</h3>
+              </div>
+
+              <div className="travel-cell">
+                <img src={travel9} alt="Tokyo" />
+                <h3>Key Largo, Florida</h3>
+              </div>
+
+              <div className="travel-cell">
+                <img src={travel8} alt="Tokyo" />
+                <h3>Key Largo, Florida</h3>
+              </div>
+
+              <div className="travel-cell">
+                <img src={travel7} alt="Tokyo" />
+                <h3>Mt Fuji</h3>
+              </div>
+
+              <div className="travel-cell">
+                <img src={travel6} alt="Tokyo" />
+                <h3>Arakurayama Sengen Park</h3>
+              </div>
+              
+              <div className="travel-cell">
+                <img src={travel1} alt="Tokyo" />
+                <h3>Key Largo, Florida</h3>
+              </div>
+
+              <div className="travel-cell">
+                <img src={travel2} alt="Zakopane" />
+                <h3>Key Largo, Florida</h3>
+              </div>
+
+              <div className="travel-cell">
+                <img src={travel3} alt="City" />
+                <h3>Bristow, VA</h3>
+              </div>
+
+              <div className="travel-cell">
+                <img src={travel4} alt="City" />
+                <h3>Pittsburgh, PA</h3>
+              </div>
+
+              <div className="travel-cell">
+                <img src={travel5} alt="City" />
+                <h3>New York, NY</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="experience" className="page bg5">
         <div className="page-inner">
           <div className="social-links">
             <h1>Experience</h1>
 
             <div className="jobs">
+
+              <div class="notification">
+                <div class="Union Home Mortgage"></div>
+                <div class="notiborderglow"></div>
+                <div class="notititle">Union Home Mortgage - Software Dev Intern | May 2026 - Aug 2026</div>
+                <div class="notibody">Just started so no details yet!</div>
+              </div>
+
               <div class="notification">
                 <div class="Emerson"></div>
                 <div class="notiborderglow"></div>
