@@ -101,10 +101,15 @@ export default function App() {
     adaptiveHeight: true,
     autoPlay: 3000,
     selectedAttraction: 0.01,
-    friction: 0.15
+    friction: 0.15,
+    pauseAutoPlayOnHover: false
   });
 
     setTimeout(() => flkty.resize(), 50);
+
+    flkty.on("pointerDown", () => {
+    flkty.playPlayer();
+  });
 
     const handleResize = () => flkty.resize();
     window.addEventListener("resize", handleResize);
