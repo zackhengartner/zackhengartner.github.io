@@ -445,7 +445,7 @@ export default function App() {
                 <img src={linkedInLogo} className="logo linkedIn" alt="LinkedIn logo" />
               </a>
               <p className="reach-out">Places To Find Me!</p>
-              <a href="https://docs.google.com/document/d/1RfPMLSREV4rFeBKzbb2UuF9oLAcGmmhJ7L4Ys8Jw_GY/edit?usp=sharing" target="_blank" rel="noopener noreferrer" >
+              <a href="https://docs.google.com/presentation/d/1kYS8oKpc7OWGy4BNADh6YTvQs65WRyoBEOvDxogc5uk/edit?usp=sharing" target="_blank" rel="noopener noreferrer" >
               Resume
               </a>
             </div>
