@@ -409,8 +409,10 @@ export default function App() {
               <div class="notification">
                 <div class="Union Home Mortgage"></div>
                 <div class="notiborderglow"></div>
-                <div class="notititle">Union Home Mortgage - Software Dev Intern | May 2026 - Aug 2026</div>
-                <div class="notibody">Just started so no details yet!</div>
+                <div class="notititle">Union Home Mortgage - IT Software Development Intern | May 2026 - Aug 2026</div>
+                <div class="notibody">Develop full-stack applications using .NET framework</div>
+                <div class="notibody">Collaborate with software development team using agile workflow methodologies</div>
+                <div class="notibody">Work with cross-functional teams to align software solutions with company needs</div>
               </div>
 
               <div class="notification">
