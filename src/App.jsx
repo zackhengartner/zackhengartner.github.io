@@ -77,16 +77,36 @@ export default function App() {
       adaptiveHeight: true
     });
 
-    setTimeout(() => flkty.resize(), 50);
+  const images = carouselRef.current.querySelectorAll("img");
 
-    const handleResize = () => flkty.resize();
-    window.addEventListener("resize", handleResize);
+  let loadedImages = 0;
 
-    return () => {
-      window.removeEventListener("resize", handleResize);
-      flkty.destroy();
-    };
-  }, []);
+  const handleImageLoad = () => {
+    loadedImages++;
+
+    if (loadedImages === images.length) {
+      flkty.resize();
+      flkty.reposition();
+    }
+  };
+
+  images.forEach((img) => {
+    if (img.complete) {
+      handleImageLoad();
+    } else {
+      img.addEventListener("load", handleImageLoad);
+    }
+  });
+
+  window.addEventListener("resize", () => {
+    flkty.resize();
+    flkty.reposition();
+  });
+
+  return () => {
+    flkty.destroy();
+  };
+}, []);
 
   useEffect(() => {
     if (!travelRef.current) return;
