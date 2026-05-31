@@ -51,6 +51,11 @@ import travel11 from "./assets/travel11.jpg";
 import travel12 from "./assets/travel12.jpg";
 import travel13 from "./assets/travel13.jpg";
 
+//Experience Logos
+import emersonLogo from "./assets/emersonLogo.png";
+import uhmLogo from "./assets/uhmLogo.png";
+import lcccLogo from "./assets/lcccLogo.png";
+
 //Map for travel page
 import Map from "./assets/Map.jsx";
 
@@ -65,6 +70,7 @@ export default function App() {
   const carouselRef = useRef(null);
   const travelRef = useRef(null);
 
+  
   useEffect(() => {
     if (!carouselRef.current) return;
 
@@ -140,6 +146,7 @@ export default function App() {
       flkty.destroy();
     };
   }, []);
+
 
   return (
     <div className="app-container">
@@ -427,44 +434,108 @@ export default function App() {
           <div className="social-links">
             <h1>Experience</h1>
 
-            <div className="jobs">
+      <div className="timeline">
 
-              <div class="notification">
-                <div class="Union Home Mortgage"></div>
-                <div class="notiborderglow"></div>
-                <div class="notititle">Union Home Mortgage - IT Software Development Intern | May 2026 - Aug 2026</div>
-                <div class="notibody">Develop full-stack applications using .NET framework</div>
-                <div class="notibody">Collaborate with software development team using agile workflow methodologies</div>
-                <div class="notibody">Work with cross-functional teams to align software solutions with company needs</div>
-              </div>
+        <div className="timeline-item left">
+          <div className="timeline-marker"></div>
 
-              <div class="notification">
-                <div class="Emerson"></div>
-                <div class="notiborderglow"></div>
-                <div class="notititle">Emerson - Electrical Engineering Co-op | Jan 2026 - Apr 2026</div>
-                <div class="notibody">Implement embedded device functionality in C for new product development</div>
-                <div class="notibody">Utilize Azure Pipelines with Ruby and Bash scripts to automate document generation</div>
-                <div class="notibody">Perform testing and data collection for product validation</div>
-              </div>
+          <div className="timeline-card">
+            <img src={lcccLogo} alt="Lorain County Community College" className="company-logo lccc1" />
+            <h2>Lab Assistant</h2>
+            <h3>Lorain County Community College</h3>
+            <p className="date">Feb 2025 - May 2025</p>
 
-              <div class="notification">
-                <div class="Emerson"></div>
-                <div class="notiborderglow"></div>
-                <div class="notititle">LCCC - Teaching Assistant | Aug 2025 - Dec 2025</div>
-                <div class="notibody">Assist students with solving programming errors</div>
-                <div class="notibody">Test and grade students submitted assignments</div>
-                <div class="notibody">Tutor students that come in during tutoring hours</div>
-              </div>
+            <ul>
+              <li>Ensure students are on task during lab sessions</li>
+              <li>Assist with programming problems and debugging</li>
+              <li>Monitor lab equipment and maintain a safe environment</li>
+            </ul>
 
-              <div class="notification">
-                <div class="Emerson"></div>
-                <div class="notiborderglow"></div>
-                <div class="notititle">LCCC - Lab Assistant | Feb 2025 - May 2025</div>
-                <div class="notibody">Ensure students are on task and making use of the time given to them during lab</div>
-                <div class="notibody">Help students with programming problems they encounter</div>
-                <div class="notibody">Safeguard/monitor the lab to prevent destruction to expensive equipment</div>
-              </div>
+            <div className="skills">
+              <span>Java</span>
+              <span>Problem Solving</span>
+              <span>Debugging</span>
+              <span>Communication</span>
             </div>
+          </div>
+        </div>
+
+        <div className="timeline-item right">
+          <div className="timeline-marker"></div>
+
+          <div className="timeline-card">
+            <img src={lcccLogo} alt="Lorain County Community College" className="company-logo lccc2" />
+            <h2>Teaching Assistant</h2>
+            <h3>Lorain County Community College</h3>
+            <p className="date">Aug 2025 - Dec 2025</p>
+
+            <ul>
+              <li>Assist students with programming concepts and errors</li>
+              <li>Grade assignments and projects</li>
+              <li>Provide tutoring during office/lab hours</li>
+            </ul>
+
+            <div className="skills">
+              <span>C++</span>
+              <span>OOP</span>
+              <span>Communication</span>
+              <span>Tutoring</span>
+              <span>Mentorship</span>
+            </div>
+          </div>
+        </div>
+
+        <div className="timeline-item left">
+          <div className="timeline-marker"></div>
+
+          <div className="timeline-card">
+            <img src={emersonLogo} alt="Emerson" className="company-logo emerson" />
+            <h2>Electrical Engineering Co-op</h2>
+            <h3>Emerson</h3>
+            <p className="date">Jan 2026 - Apr 2026</p>
+
+            <ul>
+              <li>Implement embedded device functionality in C for product development</li>
+              <li>Utilize Azure Pipelines to automate documentation and workflows</li>
+              <li>Perform testing and data collection for product validation</li>
+            </ul>
+
+            <div className="skills">
+              <span>C</span>
+              <span>C++</span>
+              <span>Embedded Systems</span>
+              <span>Azure DevOps</span>
+              <span>Scripting</span>
+            </div>
+          </div>
+        </div>
+
+        <div className="timeline-item right">
+          <div className="timeline-marker"></div>
+
+          <div className="timeline-card">
+            <img src={uhmLogo} alt="Union Home Mortgage" className="company-logo uhm" />
+            <h2>Software Development Intern</h2>
+            <h3>Union Home Mortgage</h3>
+            <p className="date">May 2026 - Aug 2026</p>
+
+            <ul>
+              <li>Develop full-stack applications using .NET</li>
+              <li>Collaborate with agile development teams</li>
+              <li>Work with cross-functional stakeholders</li>
+            </ul>
+
+            <div className="skills">
+              <span>.NET</span>
+              <span>C#</span>
+              <span>SQL</span>
+              <span>Scrum</span>
+              <span>Azure Devops</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
               
 
             <div className ="footer">

@@ -96,8 +96,9 @@ html, body {
   padding: 16px;
   box-sizing: border-box;
 
-  background: #1e1e1e;
-  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 
@@ -695,4 +696,197 @@ html, body {
   from {opacity: 0; transform: translateX(50px); filter: blur(5px);}
   to {opacity: 1; transform: translateX(0); filter: blur(0);}
 
+}
+
+.timeline {
+  position: relative;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+
+  left: 50%;
+  top: 0;
+  bottom: 0;
+
+  width: 4px;
+  background: white;
+
+  transform: translateX(-50%);
+}
+
+.left {
+  left: -90%;
+}
+
+.right {
+  left: 90%;
+}
+
+.timeline-card {
+  background: rgba(255,255,255,.08);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 1.5rem;
+  box-shadow: 0 0 15px rgba(0,0,0,.3);
+  transition: .25s;
+  width: 500px;
+  text-align: left;
+  
+}
+
+.skills {
+  display: flex;
+  gap: .5rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.skills span {
+  padding: .4rem .8rem;
+  border-radius: 999px;
+  background: rgba(255,255,255,.15);
+  font-size: .85rem;
+}
+
+.left {
+    width: 50%;
+    position: relative;
+
+    opacity: 0;
+    transform: translateY(40px);
+
+    animation: timelineRevealleft both;
+    animation-timeline: view();
+    animation-range: entry 20% cover 35%;
+}
+
+.right {
+    width: 50%;
+    position: relative;
+
+    opacity: 0;
+    transform: translateY(40px);
+
+    animation: timelineRevealright both;
+    animation-timeline: view();
+    animation-range: entry 20% cover 35%;
+}
+
+.timeline-marker {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  width: 16px;
+  height: 16px;
+
+  border-radius: 50%;
+  background: white;
+
+  transform: translate(-50%, -50%) scale(0);
+
+  opacity: 0;
+
+  animation: markerReveal both;
+  animation-timeline: view();
+  animation-range: entry 20% cover 35%;
+
+  z-index: 10;
+}
+
+@keyframes timelineRevealleft {
+  from {
+    opacity: 0;
+    transform: translatex(-40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes timelineRevealright {
+  from {
+    opacity: 0;
+    transform: translatex(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes markerReveal {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+.left .timeline-marker { left: 280%; }
+.right .timeline-marker { left: -80%; }
+
+.uhm {
+  position: absolute;
+
+  top: -20px;
+  right: 20px;
+
+  width: 150px;
+  height: 150px;
+
+  object-fit: contain;
+  filter: drop-shadow(1px 1px 1px black);
+}
+
+.emerson {
+  position: absolute;
+
+  top: -20px;
+  right: 20px;
+
+  width: 150px;
+  height: 150px;
+
+  object-fit: contain;
+  filter: drop-shadow(.5px .5px .5px rgb(14, 13, 13));
+}
+
+.lccc2 {
+  position: absolute;
+
+  top: -20px;
+  right: 20px;
+
+  width: 175px;
+  height: 175px;
+  filter: brightness(0) invert(1);
+  object-fit: contain;
+}
+
+.lccc1 {
+  position: absolute;
+
+  top: -20px;
+  right: 20px;
+
+  width: 150px;
+  height: 150px;
+  filter: brightness(0) invert(1);
+  object-fit: contain;
+}
+
+.timeline-card:hover {
+  box-shadow: 0 0 25px rgba(0,0,0,.5);
+  transform: translateY(-5px);
 }
