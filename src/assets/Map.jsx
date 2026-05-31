@@ -45,7 +45,7 @@ export default function Map() {
       description: "Second trip to the Florida Keys in 2025. Stayed at a different location this time but had a great time!"
     },
     {
-      name: "Pittsburg, PA",
+      name: "Pittsburgh, PA",
       position: [40.440387566194495, -80.00075752734688],
       description: "Drove here with my GF for a concert. Was a great trip and we got to see our favorite artists!"
     },

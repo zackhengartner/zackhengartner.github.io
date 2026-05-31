@@ -6,7 +6,8 @@ import linkedInLogo from "./assets/LinkedIn_Logo.png";
 import pythonLogo from "./assets/pythonLogo.png";
 import javaLogo from "./assets/javaLogo.png";
 import cLogo from "./assets/cLogo.png";
-import cplusplusLogo from "./assets/cplusplus.png";
+import cplusplusLogo from "./assets/cplusplusLogo.png";
+import csharpLogo from "./assets/csharpLogo.png";
 import htmlLogo from "./assets/htmlLogo.png";
 import cssLogo from "./assets/cssLogo.png";
 import picofme from "./assets/hsreal3.jpg";
@@ -176,7 +177,7 @@ export default function App() {
       </section>
 
       <section id="skills" className="page bg2">
-        <div className="page-inner">
+        <div className="page-inner skills-inner">
           <div className="skill-section">
             <h1 className="skills-header">Skills: (Programming Languages, Software, IDEs & Tools)</h1>
             <div className="grid appear">
@@ -188,17 +189,27 @@ export default function App() {
                 </div>
                 <div className ="img4">
                   <img src={cLogo} alt="cLogo" />
-                  <p>Learned and used at my time at Emerson while working on the firmware for product development</p>
+                  <p>Learned and used during my time at Emerson while working on the firmware for product development</p>
                 </div>
 
                 <div className ="img5">
                   <img src={cplusplusLogo} alt="cplusplusLogo" />
-                  <p>My most used & favorite programming lanugage. Picked up during my non-linear data structures course</p>
+                  <p>My most skilled & favorite programming lanugage. Learned during my coursework.</p>
+                </div>
+
+                <div className ="img3">
+                  <img src={csharpLogo} alt="csharpLogo" />
+                  <p>Learned during my work on full-stack development projects at Union Home Mortgage</p>
                 </div>
 
                 <div className ="img7">
                   <img src={pythonLogo} alt="pythonLogo" />
                   <p>Used for my personal projects, most notably my automated job application program</p>
+                </div>
+
+                <div className ="img8">
+                  <img src={bashLogo} alt="bashLogo" />
+                  <p>Gained experience through pipelines for an automation project at Emerson</p>
                 </div>
 
                 <div className ="img3">
@@ -209,16 +220,6 @@ export default function App() {
                 <div className ="img2">
                   <img src={cssLogo} alt="cssLogo" />
                   <p>Similarly to html, learned for the purpose of web dev so I could make my own portfolio</p>
-                </div>
-
-                <div className ="img6">
-                  <img src={powerShell} alt="powerShell" />
-                  <p>Gained knowledge scripting for an Azure Pipeline I worked on while at Emerson</p>
-                </div>
-
-                <div className ="img8">
-                  <img src={bashLogo} alt="bashLogo" />
-                  <p>Alike PowerShell, gained experience through pipelines for an automation project at Emerson</p>
                 </div>
 
               </div>
@@ -235,7 +236,7 @@ export default function App() {
 
                 <div className ="img2-2">
                   <img src={vsCode} className ="vsCode" alt="vsCode" />
-                  <p>Gained lots of experience in VS Code from personal projects using Python. Currently use for writing C at Emerson</p>
+                  <p>Gained lots of experience in VS Code from personal projects using Python. Used for writing C/C++ at Emerson</p>
                 </div>
 
                 <div className="img3-2">
@@ -282,7 +283,7 @@ export default function App() {
             </div>
 
             <div className="fadeMove">
-              <p><strong>Programming Languages:</strong> Java, JavaScript, Python, C++, C, HTML, CSS, SQL, x86, ARM, Bash, PowerShell</p>
+              <p><strong>Programming Languages:</strong> Java, JavaScript, Python, C#, C++, C, HTML, CSS, SQL, x86, ARM, Bash, PowerShell</p>
               <p><strong>Tools & IDEs:</strong> Eclipse, Visual Studios 2022, VS Code, IAR Workbench, Git, Azure Devops, MPLAB</p>
               <p><strong>Software:</strong> Microsoft Office Suite, Adobe Creative Cloud, Altium, LTspice, MATLAB</p>
             </div>
@@ -304,7 +305,7 @@ export default function App() {
       </section>
 
       <section id="projects" className="page bg3">
-        <div className="page-inner">
+        <div className="page-inner special-inner">
           <div className="projects-section">
             <h1 className="projects-header">Projects</h1>
 
@@ -346,12 +347,14 @@ export default function App() {
       </section>
 
       <section id="travels" className="page bg4">
-        <div className="page-inner">
+        <div className="page-inner special-inner">
           <div className="travel-section">
             <h1 className="travel-header">Travels</h1>
-            <p>Something about me is I am really into travel! I love the adventure of going to new places and have a lot of places I want to visit.</p>
-            <p>Below is a map of some of the places I have visited! I hope to continously update it as I explore more of the world.</p>
-            <Map />
+            <div className="travel-intro">
+              <p>Something about me is I am really into travel! I love the adventure of going to new places and have a lot of places I want to visit.</p>
+              <p>Below is a map of some of the places I have visited! I hope to continously update it as I explore more of the world.</p>
+            </div>
+            <Map className="Map" />
             <h2>Travel Photos:</h2>
             <div className="travel-carousel" ref={travelRef}>
 
@@ -420,7 +423,7 @@ export default function App() {
       </section>
 
       <section id="experience" className="page bg5">
-        <div className="page-inner">
+        <div className="page-inner experience-inner">
           <div className="social-links">
             <h1>Experience</h1>
 
