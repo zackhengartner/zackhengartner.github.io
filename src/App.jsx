@@ -495,8 +495,8 @@ export default function App() {
             <p className="date">Jan 2026 - Apr 2026</p>
 
             <ul>
-              <li>Implement embedded device functionality in C for product development</li>
-              <li>Utilize Azure Pipelines to automate documentation and workflows</li>
+              <li>Implement embedded device functionality in C/C++</li>
+              <li>Use Azure Pipelines to automate documentation and workflows</li>
               <li>Perform testing and data collection for product validation</li>
             </ul>
 
@@ -521,8 +521,8 @@ export default function App() {
 
             <ul>
               <li>Develop full-stack applications using .NET</li>
-              <li>Collaborate with agile development teams</li>
-              <li>Work with cross-functional stakeholders</li>
+              <li>Work with team using agile workflow methodologies</li>
+              <li>Work with cross-functional teams to evolve software solutions</li>
             </ul>
 
             <div className="skills">
