@@ -515,7 +515,7 @@ export default function App() {
 
           <div className="timeline-card">
             <img src={uhmLogo} alt="Union Home Mortgage" className="company-logo uhm" />
-            <h2>Software Development Intern</h2>
+            <h2>IT Software Dev Intern</h2>
             <h3>Union Home Mortgage</h3>
             <p className="date">May 2026 - Aug 2026</p>
 
