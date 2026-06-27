@@ -35,6 +35,7 @@ import compressor from "./assets/comp.png";
 import database from "./assets/database.png";
 import graphtheory from "./assets/graphtheory.png";
 import dllinjection from "./assets/dllinjection.png";
+import resumePic from "./assets/resumePNG.png";
 
 //Travel Photos
 import travel1 from "./assets/travel1.jpg";
@@ -348,6 +349,12 @@ export default function App() {
                 <p>Conducted reverse engineering analysis on Phasmophobia to create a dll which when injected, hooks into the game's functions and modifies different behavior</p>
               </div>
 
+              <div className="carousel-cell">
+                <img src={resumePic} alt="AI Resume Tailor" />
+                <h2>AI Resume Tailor</h2>
+                <p>Built an AI-driven resume tailoring system leveraging Llama 3 via Groq API with a FastAPI backend and React frontend to parse PDFs, extract structured data, and generate job-specific optimized resumes with match scoring; deployed at https://resume-tailor-frontend-henna.vercel.app/</p>
+              </div>
+
             </div>
           </div>
         </div>
@@ -364,66 +371,65 @@ export default function App() {
             <Map className="Map" />
             <h2>Travel Photos:</h2>
             <div className="travel-carousel" ref={travelRef}>
+              <figure className="travel-cell polaroid">
+                <img src={travel13} alt="Sensō-ji" />
+                <figcaption>Sensō-ji</figcaption>
+              </figure>
 
-              <div className="travel-cell">
-                <img src={travel13} alt="Tokyo" />
-                <h3>Sensō-ji</h3>
-              </div>
+              <figure className="travel-cell polaroid">
+                <img src={travel12} alt="Shibuya Crossing" />
+                <figcaption>Shibuya Crossing</figcaption>
+              </figure>
 
-              <div className="travel-cell">
-                <img src={travel12} alt="Tokyo" />
-                <h3>Shibuya Crossing</h3>
-              </div>
+              <figure className="travel-cell polaroid">
+                <img src={travel11} alt="Near Ōtsuka Station" />
+                <figcaption>Near Ōtsuka Station</figcaption>
+              </figure>
 
-              <div className="travel-cell">
-                <img src={travel11} alt="Tokyo" />
-                <h3>Near Ōtsuka Station</h3>
-              </div>
+              <figure className="travel-cell polaroid">
+                <img src={travel9} alt="Key Largo, Florida" />
+                <figcaption>Key Largo, Florida</figcaption>
+              </figure>
 
-              <div className="travel-cell">
-                <img src={travel9} alt="Tokyo" />
-                <h3>Key Largo, Florida</h3>
-              </div>
+              <figure className="travel-cell polaroid">
+                <img src={travel8} alt="Key Largo, Florida" />
+                <figcaption>Key Largo, Florida</figcaption>
+              </figure>
 
-              <div className="travel-cell">
-                <img src={travel8} alt="Tokyo" />
-                <h3>Key Largo, Florida</h3>
-              </div>
+              <figure className="travel-cell polaroid">
+                <img src={travel7} alt="Mt Fuji" />
+                <figcaption>Mt Fuji</figcaption>
+              </figure>
 
-              <div className="travel-cell">
-                <img src={travel7} alt="Tokyo" />
-                <h3>Mt Fuji</h3>
-              </div>
+              <figure className="travel-cell polaroid">
+                <img src={travel6} alt="Arakurayama Sengen Park" />
+                <figcaption>Arakurayama Sengen Park</figcaption>
+              </figure>
 
-              <div className="travel-cell">
-                <img src={travel6} alt="Tokyo" />
-                <h3>Arakurayama Sengen Park</h3>
-              </div>
-              
-              <div className="travel-cell">
-                <img src={travel1} alt="Tokyo" />
-                <h3>Key Largo, Florida</h3>
-              </div>
+              <figure className="travel-cell polaroid">
+                <img src={travel1} alt="Key Largo, Florida" />
+                <figcaption>Key Largo, Florida</figcaption>
+              </figure>
 
-              <div className="travel-cell">
-                <img src={travel2} alt="Zakopane" />
-                <h3>Key Largo, Florida</h3>
-              </div>
+              <figure className="travel-cell polaroid">
+                <img src={travel2} alt="Key Largo, Florida" />
+                <figcaption>Key Largo, Florida</figcaption>
+              </figure>
 
-              <div className="travel-cell">
-                <img src={travel3} alt="City" />
-                <h3>Bristow, VA</h3>
-              </div>
+              <figure className="travel-cell polaroid">
+                <img src={travel3} alt="Bristow, VA" />
+                <figcaption>Bristow, VA</figcaption>
+              </figure>
 
-              <div className="travel-cell">
-                <img src={travel4} alt="City" />
-                <h3>Pittsburgh, PA</h3>
-              </div>
+              <figure className="travel-cell polaroid">
+                <img src={travel4} alt="Pittsburgh, PA" />
+                <figcaption>Pittsburgh, PA</figcaption>
+              </figure>
 
-              <div className="travel-cell">
-                <img src={travel5} alt="City" />
-                <h3>New York, NY</h3>
-              </div>
+              <figure className="travel-cell polaroid">
+                <img src={travel5} alt="New York, NY" />
+                <figcaption>New York, NY</figcaption>
+              </figure>
             </div>
           </div>
         </div>
