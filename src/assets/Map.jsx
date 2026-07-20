@@ -59,13 +59,9 @@ export default function Map() {
 
   return (
     <MapContainer
+      className="travel-map"
       center={[20, 0]}
       zoom={2}
-      style={{
-        height: "600px",
-        width: "100%",
-        borderRadius: "20px"
-      }}
     >
       <TileLayer
         attribution='&copy; OpenStreetMap contributors'

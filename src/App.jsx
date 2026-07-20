@@ -70,8 +70,10 @@ import "./App.css";
 export default function App() {
   const carouselRef = useRef(null);
   const travelRef = useRef(null);
+  const [navOpen, setNavOpen] = useState(false);
 
-  
+  const closeNav = () => setNavOpen(false);
+
   useEffect(() => {
     if (!carouselRef.current) return;
 
@@ -85,59 +87,62 @@ export default function App() {
       adaptiveHeight: true
     });
 
-  const images = carouselRef.current.querySelectorAll("img");
+    const images = carouselRef.current.querySelectorAll("img");
+    let loadedImages = 0;
 
-  let loadedImages = 0;
+    const handleImageLoad = () => {
+      loadedImages++;
 
-  const handleImageLoad = () => {
-    loadedImages++;
+      if (loadedImages === images.length) {
+        flkty.resize();
+        flkty.reposition();
+      }
+    };
 
-    if (loadedImages === images.length) {
+    images.forEach((img) => {
+      if (img.complete) {
+        handleImageLoad();
+      } else {
+        img.addEventListener("load", handleImageLoad);
+      }
+    });
+
+    const handleResize = () => {
       flkty.resize();
       flkty.reposition();
-    }
-  };
+    };
 
-  images.forEach((img) => {
-    if (img.complete) {
-      handleImageLoad();
-    } else {
-      img.addEventListener("load", handleImageLoad);
-    }
-  });
+    window.addEventListener("resize", handleResize);
 
-  window.addEventListener("resize", () => {
-    flkty.resize();
-    flkty.reposition();
-  });
-
-  return () => {
-    flkty.destroy();
-  };
-}, []);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+      images.forEach((img) => img.removeEventListener("load", handleImageLoad));
+      flkty.destroy();
+    };
+  }, []);
 
   useEffect(() => {
     if (!travelRef.current) return;
 
     const flkty = new Flickity(travelRef.current, {
-    cellAlign: "center",
-    contain: true,
-    wrapAround: true,
-    pageDots: false,
-    prevNextButtons: false,
-    draggable: false,
-    adaptiveHeight: true,
-    autoPlay: 3000,
-    selectedAttraction: 0.01,
-    friction: 0.15,
-    pauseAutoPlayOnHover: false
-  });
+      cellAlign: "center",
+      contain: true,
+      wrapAround: true,
+      pageDots: false,
+      prevNextButtons: false,
+      draggable: true,
+      adaptiveHeight: true,
+      autoPlay: 3000,
+      selectedAttraction: 0.01,
+      friction: 0.15,
+      pauseAutoPlayOnHover: false
+    });
 
     setTimeout(() => flkty.resize(), 50);
 
     flkty.on("pointerDown", () => {
-    flkty.playPlayer();
-  });
+      flkty.playPlayer();
+    });
 
     const handleResize = () => flkty.resize();
     window.addEventListener("resize", handleResize);
@@ -151,12 +156,25 @@ export default function App() {
 
   return (
     <div className="app-container">
-      <nav className="main-Nav">
-        <a href="#about">About Me</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#travels">Travels</a>
-        <a href="#experience">Experience</a>
+      <nav className={`main-Nav${navOpen ? " is-open" : ""}`}>
+        <button
+          type="button"
+          className="nav-toggle"
+          aria-label={navOpen ? "Close menu" : "Open menu"}
+          aria-expanded={navOpen}
+          onClick={() => setNavOpen((open) => !open)}
+        >
+          <span />
+          <span />
+          <span />
+        </button>
+        <div className="nav-links">
+          <a href="#about" onClick={closeNav}>About Me</a>
+          <a href="#skills" onClick={closeNav}>Skills</a>
+          <a href="#projects" onClick={closeNav}>Projects</a>
+          <a href="#travels" onClick={closeNav}>Travels</a>
+          <a href="#experience" onClick={closeNav}>Experience</a>
+        </div>
       </nav>
 
       <section id="about" className="page bg1">
@@ -271,7 +289,7 @@ export default function App() {
             </div>
             <div className ="grid appear">
               <h2 className="coding-lang">Software:</h2>
-              <div class ="img-grid3">
+              <div className="img-grid3">
                 <div className ="img1-3">
                   <img src={altiumLogo} alt="altiumLogo" />
                   <p>Trained to use while working at Emerson. Lots of fun learning to build schematics and make PCB layouts</p>
