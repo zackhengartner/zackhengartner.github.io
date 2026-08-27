@@ -14,6 +14,8 @@ import picofme from "./assets/hsreal3.jpg";
 import javaScript from "./assets/javaScript.png";
 import bashLogo from "./assets/bashLogo.png";
 import powerShell from "./assets/powerShell.png";
+import rubyLogo from "./assets/rubyLogo.svg";
+import sqlLogo from "./assets/sqlLogo.svg";
 
 //Tools/IDEs Logos
 import vs2022 from "./assets/vs2022.png";
@@ -22,6 +24,20 @@ import eclipseLogo from "./assets/eclipseLogo.png";
 import azureDevops from "./assets/azureDevops.png";
 import gitLogo from "./assets/gitLogo.png";
 import mplabLogo from "./assets/mplabLogo.png";
+import dockerLogo from "./assets/dockerLogo.svg";
+import postmanLogo from "./assets/postmanLogo.svg";
+import azureLogo from "./assets/azureLogo.svg";
+
+//Frameworks & Libraries Logos
+import reactLogo from "./assets/reactLogo.svg";
+import dotnetLogo from "./assets/dotnetLogo.svg";
+import blazorLogo from "./assets/blazorLogo.svg";
+import fastapiLogo from "./assets/fastapiLogo.svg";
+import pytorchLogo from "./assets/pytorchLogo.svg";
+import numpyLogo from "./assets/numpyLogo.svg";
+import scikitLogo from "./assets/scikitLogo.svg";
+import huggingfaceLogo from "./assets/huggingfaceLogo.svg";
+import playwrightLogo from "./assets/playwrightLogo.svg";
 
 //Software Logos
 import altiumLogo from "./assets/altiumLogo.png";
@@ -36,6 +52,7 @@ import database from "./assets/database.png";
 import graphtheory from "./assets/graphtheory.png";
 import dllinjection from "./assets/dllinjection.png";
 import resumePic from "./assets/resumePNG.png";
+import docExtraction from "./assets/reverseEngineering.png";
 
 //Travel Photos
 import travel1 from "./assets/travel1.jpg";
@@ -195,8 +212,8 @@ export default function App() {
             <p><em>Hint: Hover Over Logo</em></p>
             <img src={toledoLogo} className="logoToledo" alt="Toledo logo" />
             <p className="About-Me-Text">
-              I currently attend the <strong>University of Toledo</strong>, studying Computer Science & Engineering. My CSE program is in partnership with <strong>LCCC </strong>
-              and allows me to take my classes from a satellite campus in North Ridgeville
+              I currently attend the <strong>University of Toledo</strong>, working toward a B.S. in Computer Science & Engineering (expected <strong>Dec 2027</strong>) with a <strong>3.79 GPA</strong>. My CSE program is in partnership with <strong>LCCC </strong>
+              &mdash; where I earned my Associate of Arts & Science with a 3.89 GPA &mdash; and allows me to take my classes from a satellite campus in North Ridgeville
             </p>
           </div>
         </div>
@@ -215,32 +232,32 @@ export default function App() {
                 </div>
                 <div className ="img4">
                   <img src={cLogo} alt="cLogo" />
-                  <p>Learned and used during my time at Emerson while working on the firmware for product development</p>
+                  <p>Used at Emerson to write production embedded firmware for a Greenlee high voltage testing product</p>
                 </div>
 
                 <div className ="img5">
                   <img src={cplusplusLogo} alt="cplusplusLogo" />
-                  <p>My most skilled & favorite programming lanugage. Learned during my coursework.</p>
+                  <p>My most skilled & favorite programming lanugage. Learned during my coursework and taught it as a TA at LCCC</p>
                 </div>
 
                 <div className ="img3">
                   <img src={csharpLogo} alt="csharpLogo" />
-                  <p>Learned during my work on full-stack development projects at Union Home Mortgage</p>
+                  <p>Used at Union Home Mortgage to build full-stack applications with .NET, ASP.NET Core, and Blazor</p>
                 </div>
 
                 <div className ="img7">
                   <img src={pythonLogo} alt="pythonLogo" />
-                  <p>Used for my personal projects, most notably my automated job application program</p>
+                  <p>My go-to for AI/ML work — PyTorch transformers, FastAPI backends, and Playwright automation</p>
                 </div>
 
                 <div className ="img8">
                   <img src={bashLogo} alt="bashLogo" />
-                  <p>Gained experience through pipelines for an automation project at Emerson</p>
+                  <p>Used alongside Ruby in Azure Pipelines to automate firmware release documentation at Emerson</p>
                 </div>
 
                 <div className ="img3">
                   <img src={htmlLogo} alt="htmlLogo" />
-                  <p>One of my most recent languages. Used it to make this website you're currently looking at!</p>
+                  <p>One of my most recent languages. Used it to make this website you&apos;re currently looking at!</p>
                 </div>
 
                 <div className ="img2">
@@ -248,9 +265,29 @@ export default function App() {
                   <p>Similarly to html, learned for the purpose of web dev so I could make my own portfolio</p>
                 </div>
 
+                <div className ="img6">
+                  <img src={javaScript} alt="javaScriptLogo" />
+                  <p>Learned alongside html and css for web dev, and used it to bring this portfolio to life</p>
+                </div>
+
+                <div className ="img1">
+                  <img src={sqlLogo} alt="sqlLogo" />
+                  <p>Used to design my internship database project, and for querying data while building full-stack apps</p>
+                </div>
+
+                <div className ="img5">
+                  <img src={rubyLogo} alt="rubyLogo" />
+                  <p>Picked up at Emerson to write the Azure Pipeline scripts that auto-generate firmware release docs</p>
+                </div>
+
+                <div className ="img4">
+                  <img src={powerShell} alt="powerShellLogo" />
+                  <p>My go-to for quick Windows scripting and automating the repetitive parts of my dev workflow</p>
+                </div>
+
               </div>
             </div>
-            
+
             <div className ="grid appear">
               <h2 className="coding-lang">Tools & IDEs:</h2>
               <div className ="img-grid2">
@@ -258,11 +295,11 @@ export default function App() {
                 <div className ="img1-2">
                   <img src={vs2022} className ="vs2022" alt="vs2022" />
                   <p>My most used IDE. Gained lots of experience throughout coursework and personal projects mainly using C++</p>
-                </div> 
+                </div>
 
                 <div className ="img2-2">
                   <img src={vsCode} className ="vsCode" alt="vsCode" />
-                  <p>Gained lots of experience in VS Code from personal projects using Python. Used for writing C/C++ at Emerson</p>
+                  <p>My daily driver for Python and AI projects. Also used for writing C/C++ at Emerson</p>
                 </div>
 
                 <div className="img3-2">
@@ -285,6 +322,73 @@ export default function App() {
                   <p>Used to program target boards during product development at Emerson. Very useful and rather easy to navigate UI</p>
                 </div>
 
+                <div className ="img1-2">
+                  <img src={dockerLogo} alt="dockerLogo" />
+                  <p>Used to containerize projects so they run the same way on my machine as they do anywhere else</p>
+                </div>
+
+                <div className ="img2-2">
+                  <img src={postmanLogo} alt="postmanLogo" />
+                  <p>Used at Union Home Mortgage to design, test, and validate RESTful API endpoints before wiring them up</p>
+                </div>
+
+                <div className ="img3-2">
+                  <img src={azureLogo} alt="azureLogo" />
+                  <p>The cloud side of my work. Used for pipelines and services alongside Azure DevOps at Emerson and UHM</p>
+                </div>
+
+              </div>
+            </div>
+
+            <div className ="grid appear">
+              <h2 className="coding-lang">Frameworks & Libraries:</h2>
+              <div className ="img-grid2">
+
+                <div className ="img1-2">
+                  <img src={dotnetLogo} alt="dotnetLogo" />
+                  <p>The backbone of my work at Union Home Mortgage, building full-stack apps with C# and ASP.NET Core</p>
+                </div>
+
+                <div className ="img2-2">
+                  <img src={blazorLogo} alt="blazorLogo" />
+                  <p>Used at UHM to build interactive front ends in C# for internal and customer-facing applications</p>
+                </div>
+
+                <div className ="img3-2">
+                  <img src={reactLogo} alt="reactLogo" />
+                  <p>My frontend of choice. Used at UHM and for the interface of my AI Resume Tailor project</p>
+                </div>
+
+                <div className ="img4-2">
+                  <img src={fastapiLogo} alt="fastapiLogo" />
+                  <p>Powers the Python backend of my AI Resume Tailor, serving the parsing and tailoring endpoints</p>
+                </div>
+
+                <div className ="img5-2">
+                  <img src={pytorchLogo} alt="pytorchLogo" />
+                  <p>Used to build a decoder-only transformer from scratch, attention blocks and training loop included</p>
+                </div>
+
+                <div className ="img6-2">
+                  <img src={numpyLogo} alt="numpyLogo" />
+                  <p>The workhorse behind the array and tensor math in my machine learning projects</p>
+                </div>
+
+                <div className ="img1-2">
+                  <img src={scikitLogo} alt="scikitLearnLogo" />
+                  <p>My starting point for classic ML workflows, training and evaluating models on real datasets</p>
+                </div>
+
+                <div className ="img2-2">
+                  <img src={huggingfaceLogo} alt="huggingFaceLogo" />
+                  <p>Where I pull models and tooling from when experimenting with transformers and fine-tuning</p>
+                </div>
+
+                <div className ="img3-2">
+                  <img src={playwrightLogo} alt="playwrightLogo" />
+                  <p>Drives my job application automation, scraping and filling out Workday forms page by page</p>
+                </div>
+
               </div>
             </div>
             <div className ="grid appear">
@@ -304,13 +408,15 @@ export default function App() {
                   <img src={matlabLogo} alt="matlabLogo" />
                   <p>Was introduced to during my coursework and further experience from the Arduino Engineering Kit</p>
                 </div>
-                
+
               </div>
             </div>
 
             <div className="fadeMove">
-              <p><strong>Programming Languages:</strong> Java, JavaScript, Python, C#, C++, C, HTML, CSS, SQL, x86, ARM, Bash, PowerShell</p>
-              <p><strong>Tools & IDEs:</strong> Eclipse, Visual Studios 2022, VS Code, IAR Workbench, Git, Azure Devops, MPLAB</p>
+              <p><strong>Programming Languages:</strong> Python, C, C++, C#, JavaScript, SQL, Bash, Ruby, PowerShell, HTML, CSS, x86, ARM</p>
+              <p><strong>Frameworks & Libraries:</strong> .NET, ASP.NET Core, Blazor, React, FastAPI, PyTorch, NumPy, Scikit-Learn, LangGraph, HuggingFace, Playwright</p>
+              <p><strong>AI & Machine Learning:</strong> Deep Learning, Transformers, OCR, RAG, PEFT</p>
+              <p><strong>Tools & IDEs:</strong> Visual Studios 2022, VS Code, Eclipse, IAR Workbench, Git, Azure DevOps, Docker, CI/CD, Postman, MPLAB</p>
               <p><strong>Software:</strong> Microsoft Office Suite, Adobe Creative Cloud, Altium, LTspice, MATLAB</p>
             </div>
             {/* <nav className="menu">
@@ -338,15 +444,27 @@ export default function App() {
             <div className="carousel" ref={carouselRef}>
 
               <div className="carousel-cell">
-                <img src={webDev} alt="Portfolio" />
-                <h2>Portfolio</h2>
-                <p>Developed this website that you see infront of you, using HTML, CSS, and JavaScript!</p>
+                <img src={graphtheory} alt="GPT From Scratch" />
+                <h2>GPT From Scratch</h2>
+                <p>Implemented a decoder-only transformer from scratch in PyTorch: multi-head causal self-attention, positional embeddings, layer norm, residual blocks, and the full training loop. Trained 0.8M and 10.8M parameter models on 1.1M characters of Shakespeare, where they learned English spelling, grammar, and dialogue formatting purely from predicting one character at a time</p>
+              </div>
+
+              <div className="carousel-cell">
+                <img src={docExtraction} alt="AI Document Extraction" />
+                <h2>AI Document Extraction</h2>
+                <p>Designed a schema-driven document extraction pipeline using GPT-5.6 Luna with PDF parsing and OCR fallback, tracking cost and performance statistics while achieving 96% cross-field accuracy. Used gold-label data for evaluation and an evidence-or-review structure to help automate the mortgage process</p>
+              </div>
+
+              <div className="carousel-cell">
+                <img src={resumePic} alt="AI Resume Tailor" />
+                <h2>AI Powered Resume Tailor</h2>
+                <p>Built a full-stack resume tailoring app that uses the Groq API to surface the most relevant experience and suggest additional fields, extracting original resume data with pypdf and an OCR fallback through Tesseract. Runs on a Python and FastAPI backend with a React frontend; deployed at https://airesumetailor.co/</p>
               </div>
 
               <div className="carousel-cell">
                 <img src={automation} alt="Automation" />
                 <h2>Application Automation</h2>
-                <p>Developed a python script which uses the playwright extension to allow for job applications to be automated if they are filled out using the workday platform</p>
+                <p>Developed a Python script which uses Playwright to scrape the frontend of the Workday platform and automate the job application process by filling out fields for every page, pairing a hard-wired page-by-page script with a Groq API LLM fallback that analyzes each page for missing information and validates completed fields</p>
               </div>
 
               <div className="carousel-cell">
@@ -364,13 +482,13 @@ export default function App() {
               <div className="carousel-cell">
                 <img src={dllinjection} alt="DLL Project" />
                 <h2>Zackmophobia</h2>
-                <p>Conducted reverse engineering analysis on Phasmophobia to create a dll which when injected, hooks into the game's functions and modifies different behavior</p>
+                <p>Conducted reverse engineering analysis on Phasmophobia to create a dll which when injected, hooks into the game&apos;s functions and modifies different behavior</p>
               </div>
 
               <div className="carousel-cell">
-                <img src={resumePic} alt="AI Resume Tailor" />
-                <h2>AI Resume Tailor</h2>
-                <p>Built an AI-driven resume tailoring system leveraging Llama 3 via Groq API with a FastAPI backend and React frontend to parse PDFs, extract structured data, and generate job-specific optimized resumes with match scoring; deployed at https://resume-tailor-frontend-henna.vercel.app/</p>
+                <img src={webDev} alt="Portfolio" />
+                <h2>Portfolio</h2>
+                <p>Developed this website that you see infront of you, using HTML, CSS, and JavaScript!</p>
               </div>
 
             </div>
@@ -470,9 +588,9 @@ export default function App() {
             <p className="date">Feb 2025 - May 2025</p>
 
             <ul>
-              <li>Ensure students are on task during lab sessions</li>
-              <li>Assist with programming problems and debugging</li>
-              <li>Monitor lab equipment and maintain a safe environment</li>
+              <li>Kept students on task and supported during lab sessions</li>
+              <li>Assisted with programming problems and debugging</li>
+              <li>Monitored lab equipment and maintained a safe environment</li>
             </ul>
 
             <div className="skills">
@@ -494,9 +612,9 @@ export default function App() {
             <p className="date">Aug 2025 - Dec 2025</p>
 
             <ul>
-              <li>Assist students with programming concepts and errors</li>
-              <li>Grade assignments and projects</li>
-              <li>Provide tutoring during office/lab hours</li>
+              <li>Supported students struggling with programming errors in an object-oriented C++ class</li>
+              <li>Tutored students after class to improve homework and exam scores with coding and studying strategies</li>
+              <li>Coordinated with the professor to gameplan exams, work structure, and course activities</li>
             </ul>
 
             <div className="skills">
@@ -519,17 +637,18 @@ export default function App() {
             <p className="date">Jan 2026 - Apr 2026</p>
 
             <ul>
-              <li>Implement embedded device functionality in C/C++</li>
-              <li>Use Azure Pipelines to automate documentation and workflows</li>
-              <li>Perform testing and data collection for product validation</li>
+              <li>Developed production embedded firmware in C/C++ for a Greenlee high voltage testing product</li>
+              <li>Automated firmware release documentation using Azure Pipelines with Ruby and Bash scripts</li>
+              <li>Conducted systematic testing and data collection to validate product performance</li>
             </ul>
 
             <div className="skills">
               <span>C</span>
               <span>C++</span>
-              <span>Embedded Systems</span>
-              <span>Azure DevOps</span>
-              <span>Scripting</span>
+              <span>Embedded Firmware</span>
+              <span>Azure Pipelines</span>
+              <span>Ruby</span>
+              <span>Bash</span>
             </div>
           </div>
         </div>
@@ -544,23 +663,24 @@ export default function App() {
             <p className="date">May 2026 - Aug 2026</p>
 
             <ul>
-              <li>Develop full-stack applications using .NET</li>
-              <li>Work with team using agile workflow methodologies</li>
-              <li>Work with cross-functional teams to evolve software solutions</li>
+              <li>Developed full-stack applications using C#, .NET, ASP.NET Core, Blazor, and React</li>
+              <li>Contributed to the AI team&apos;s document extraction efforts to automate information gathering</li>
+              <li>Designed, tested, and validated RESTful API endpoints using Postman</li>
             </ul>
 
             <div className="skills">
-              <span>.NET</span>
               <span>C#</span>
-              <span>SQL</span>
-              <span>Scrum</span>
-              <span>Azure Devops</span>
+              <span>.NET</span>
+              <span>Blazor</span>
+              <span>React</span>
+              <span>REST APIs</span>
+              <span>Postman</span>
             </div>
           </div>
         </div>
 
       </div>
-              
+
 
             <div className ="footer">
               <a href="https://github.com/zackhengartner" target="_blank" rel="noreferrer">
